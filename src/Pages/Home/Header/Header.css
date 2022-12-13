@@ -1,0 +1,66 @@
+.header-section{
+    background: #000;
+    padding: 7px 0;
+}
+.header-section .main-header{
+    display: flex;
+    justify-content: space-between;
+}
+.header-section .main-header .left{
+    display: flex;
+    align-items: center;
+}
+.header-section .main-header .left p{
+    color: white;
+    position: relative;
+    margin-left: 27px;
+}
+.header-section .main-header .mail{
+    position: absolute;
+    left: -27px;
+    top: 1px;
+    font-size: 20px;
+}
+.header-section .main-header .left span{
+    color: white;
+    margin-left: 70px;
+    position: relative;
+}
+.header-section .main-header .phone{
+    position: absolute;
+    left: -27px;
+    top: 1px;
+    font-size: 20px;
+}
+.header-section .main-header .right a{
+    display: inline-block;
+    color: #ffffff;
+    background: #E4000D;
+    font-size: 19px;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: .5s;
+}
+.header-section .main-header .right a:hover{
+    opacity: 70%;
+}
+
+@media screen and (max-width: 776px) {
+    .header-section .main-header{
+        display: block;
+    }
+    .header-section .main-header .right{
+        text-align: right;
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .header-section .main-header .left{
+        display: block;
+    }
+    .header-section .main-header .left span{
+        margin-left: 29px;
+        top: 7px;
+    }
+}
