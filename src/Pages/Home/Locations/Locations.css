@@ -1,0 +1,29 @@
+
+.locations{
+    background-color: #000;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+}
+.locations::before{
+    background-image: url(/src/assets/bg-1.png);
+    content: '';
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    background-repeat: repeat-x;
+    left: 0;
+    bottom: -7px;
+}
+.locations p{
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffff;
+    margin: 0;
+    padding: 10px 50px;
+}
+@media screen and (max-width: 576px) {
+    .locations p{
+        font-size: 17px;
+    } 
+}

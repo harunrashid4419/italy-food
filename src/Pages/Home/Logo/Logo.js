@@ -8,9 +8,6 @@ const Logo = () => {
       <div className="logo">
         <img src={logo} alt="italy food logo" />
       </div>
-      <div className="locations">
-        <p>TRUELY THE BEST RESTAURANT IN TOWN - THE NEW YORK TIMES</p>
-      </div>
     </div>
   );
 };
