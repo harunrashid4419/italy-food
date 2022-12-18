@@ -30,7 +30,7 @@ const Footer = () => {
               <h1>Location</h1>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.289259162295!2d-120.7989351!3d37.5246781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8091042b3386acd7%3A0x3b4a4cedc60363dd!2sMain+St%2C+Denair%2C+CA+95316%2C+Hoa+K%E1%BB%B3!5e0!3m2!1svi!2s!4v1434016649434"
-                frameborder="0"
+                frameBorder="0"
               ></iframe>
             </div>
 
@@ -54,16 +54,16 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div class="socket-section">
-        <div class="container">
-          <div class="socket">
-            <div class="left">
+      <div className="socket-section">
+        <div className="container">
+          <div className="socket">
+            <div className="left">
               <p>
                 Copyright 2015 - <a href="#">Free Html5 Templates</a> Designed
                 by Zerotheme.com{" "}
               </p>
             </div>
-            <div class="right">
+            <div className="right">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Use</a>
             </div>

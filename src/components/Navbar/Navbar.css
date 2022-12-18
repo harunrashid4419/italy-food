@@ -20,7 +20,7 @@
 	border-left: 49px solid #E4000D;
 	border-right: 49px solid transparent;
 	left: 0;
-	top: 118px;
+	top: 138px;
 	transition: .5s;
 	z-index:9;
 }
@@ -38,7 +38,7 @@
 	border-left: 49px solid transparent;
 	border-right: 49px solid #E4000D;
 	right: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -68,7 +68,7 @@
 	border-left: 49px solid #BE0A0A;
 	border-right: 49px solid transparent;
 	left: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -86,7 +86,7 @@
 	border-left: 49px solid transparent;
 	border-right: 49px solid #BE0A0A;
 	right: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -116,7 +116,7 @@
 	border-left: 49px solid #A00000;
 	border-right: 49px solid transparent;
 	left: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -134,7 +134,7 @@
 	border-left: 49px solid transparent;
 	border-right: 49px solid #A00000;
 	right: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -164,7 +164,7 @@
 	border-left: 49px solid #780000;
 	border-right: 49px solid transparent;
 	left: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -182,7 +182,7 @@
 	border-left: 49px solid transparent;
 	border-right: 49px solid #780000;
 	right: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -213,7 +213,7 @@
 	border-left: 49px solid #5A0000;
 	border-right: 49px solid transparent;
 	left: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -231,7 +231,7 @@
 	border-left: 49px solid transparent;
 	border-right: 49px solid #5A0000;
 	right: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -261,7 +261,7 @@
 	border-left: 49px solid #860000;
 	border-right: 49px solid transparent;
 	left: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -279,7 +279,7 @@
 	border-left: 49px solid transparent;
 	border-right: 49px solid #860000;
 	right: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -309,7 +309,7 @@
 	border-left: 49px solid #9C1D10;
 	border-right: 49px solid transparent;
 	left: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -327,7 +327,7 @@
 	border-left: 49px solid transparent;
 	border-right: 49px solid #9C1D10;
 	right: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -357,7 +357,7 @@
 	border-left: 49px solid #B72112;
 	border-right: 49px solid transparent;
 	left: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -375,7 +375,7 @@
 	border-left: 49px solid transparent;
 	border-right: 49px solid #B72112;
 	right: 0;
-	top: 118px;
+	top: 138px;
 	transition:.5s;
 	z-index:9;
 }
@@ -396,7 +396,7 @@
 	font-weight: 400;
 	text-transform: uppercase;
 	display: block;
-	padding: 70px 20px 30px 20px;
+	padding: 90px 20px 30px 20px;
 	text-align:center;
 	transition:.5s;
 }

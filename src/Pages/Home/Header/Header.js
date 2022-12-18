@@ -1,5 +1,6 @@
-import React from "react";
 import "./Header.css";
+import { FiMail } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import {
   FaFacebook,
   FaGooglePlus,
@@ -8,8 +9,6 @@ import {
   FaTwitter,
   FaPhoneAlt
 } from "react-icons/fa";
-import { FiMail } from "react-icons/fi";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   return (

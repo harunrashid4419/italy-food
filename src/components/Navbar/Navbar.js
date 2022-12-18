@@ -1,35 +1,51 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { toast } from "react-hot-toast";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../UserContext/UserContext";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const handleLogOut = () =>{
+    logOut()
+      .then(() =>{
+        toast.success('LogOut success');
+        navigate('/login');
+      })
+      .catch(error => console.error(error));
+  }
   return (
     <div className="navbar-section">
-      <div class="main-menu">
-        <ul class="main">
-          <li class="home">
-            <Link>home</Link>
+      <div className="main-menu">
+        <ul className="main">
+          <li className="home">
+            <Link to="/">home</Link>
           </li>
-          <li class="location">
+          <li className="location">
             <Link>location</Link>
           </li>
-          <li class="blog">
+          <li className="blog">
             <Link>blog</Link>
           </li>
-          <li class="news">
+          <li className="news">
             <Link>news</Link>
           </li>
-          <li class="gallery">
+          <li className="gallery">
             <Link>gallery</Link>
           </li>
-          <li class="dashboard">
+          <li className="dashboard">
             <Link>Dashboard</Link>
           </li>
-          <li class="order">
+          <li className="order">
             <Link>Order</Link>
           </li>
-          <li class="login">
-            <Link>Login</Link>
+          <li className="login">
+            {user ? (
+              <Link onClick={handleLogOut} >LogOut</Link>
+            ) : (
+              <Link to="/login">LogIn</Link>
+            )}
           </li>
         </ul>
       </div>

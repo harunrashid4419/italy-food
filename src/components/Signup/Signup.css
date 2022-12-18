@@ -1,0 +1,78 @@
+.main-singup{
+    background-color: white;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.main-singup .signup{
+    width: 50%;
+    margin: 0 auto;
+}
+.main-singup .signup h3{
+    color: black;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+.main-singup .signup span {
+	color: black;
+	font-size: 16px;
+	font-weight: 400;
+}
+.main-singup .signup input {
+	border-bottom: 1px solid #0000003d;
+	border-radius: 0px;
+}
+.form-icon{
+    position: relative;
+}
+.main-singup .signup .icon{
+    position: absolute;
+    top: 51px;
+    left: 0;
+    color: #00000094;
+}
+.main-singup .signup input::placeholder{
+    padding-left: 10px;
+}
+#button  input{
+    background-image: linear-gradient(to right, green , gray);
+}
+#button  input:hover{
+    opacity: 90%;
+}
+.main-singup .social-login{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.main-singup .social-login .social-icon{
+    height: 50px;
+    width: 50px;
+    background-image: linear-gradient(to right, #008000b8 , gray);
+    padding: 13px;
+    border-radius: 50%;
+    color: white;
+    margin: 0 10px;
+}
+.main-singup .social-login .social-icon:hover{
+    opacity: 70%;
+}
+.main-singup .singup-link{
+    margin-top: 15px;
+    text-align: center;
+}
+.main-singup .singup-link .link{
+    color: green;
+    font-size: 20px;
+    text-decoration: none;
+}
+.main-singup .singup-link .link:hover{
+    opacity: 70%;
+}
+
+@media screen and (max-width: 776px) {
+    .main-singup .signup{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
