@@ -5,7 +5,7 @@ import footerImg from "../../../src/assets/a-1.jpg";
 const Footer = () => {
   return (
     <div>
-      <div className="footer-section">
+      <div id='footer' className="footer-section">
         <div className="container">
           <div className="footer">
             <div className="flex-column">

@@ -1,13 +1,18 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import Categories from '../Categories/Categories';
-import './Home.css';
+import CompanyTitle from '../CompanyTitle/CompanyTitle';
+import Menu from '../Menu/Menu';
+import OurCapacity from '../OurCapacity/OurCapacity';
+import Review from '../Review/Review';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Categories></Categories>
+            <OurCapacity></OurCapacity>
+            <CompanyTitle></CompanyTitle>
+            <Menu></Menu>
+            <Review></Review>
         </div>
     );
 };

@@ -3,7 +3,7 @@ import Lottie from "lottie-react";
 import loginAnimation from "../../../src/assets/login.json";
 import { useForm } from "react-hook-form";
 import "./Login.css";
-import { FaUser, FaLock, FaGoogle, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaUser, FaLock, FaGoogle, FaFacebookF, FaTwitter } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../UserContext/UserContext";
 import { toast } from "react-hot-toast";
@@ -73,7 +73,7 @@ const Login = () => {
           </form>
           <div className="social-login">
             <Link><FaGoogle className="social-icon" /></Link>
-            <Link><FaGithub className="social-icon" /></Link>
+            <Link><FaFacebookF className="social-icon" /></Link>
             <Link><FaTwitter className="social-icon" /></Link>
           </div>
           <div className="singup-link">

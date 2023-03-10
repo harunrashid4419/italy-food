@@ -34,6 +34,9 @@
 .login-section .login input::placeholder{
     padding-left: 10px;
 }
+.login-section .login input:focus{
+    border: none;
+}
 .form-icon{
     position: relative;
 }
