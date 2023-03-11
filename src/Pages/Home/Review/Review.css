@@ -58,4 +58,7 @@
     .slider p{
         max-width: 95%;
     }
+    .slider{
+        padding: 30px 0 20px 0;
+    }
 }

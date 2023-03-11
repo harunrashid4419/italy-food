@@ -8,10 +8,12 @@
     margin: 0 auto;
 }
 .main-singup .signup h3{
-    color: black;
-    font-size: 32px;
+    color: #3f3f3f;
+    font-size: 40px;
     font-weight: 700;
     text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
 }
 .main-singup .signup span {
 	color: black;
@@ -38,10 +40,12 @@
     padding-left: 10px;
 }
 #button  input{
-    background-image: linear-gradient(to right, green , gray);
+    background: linear-gradient(to left, green 50%, black 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
 }
 #button  input:hover{
-    opacity: 90%;
+    background-position: left;
 }
 .main-singup .social-login{
     display: flex;

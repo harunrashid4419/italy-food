@@ -41,7 +41,7 @@ const Review = () => {
       id: 4,
       name: "Adam smith",
       role: "customer",
-      img: "https://i.ibb.co/ccktnRC/g1.png",
+      img: "https://i.ibb.co/sqkKn0K/istockphoto-1179420343-612x612.jpg",
       borderImg: "https://i.ibb.co/z4bb3p1/bg-best.png",
       message:
         "Well-produced, informative, casual, non-intimidating and so much fun. Just perfect.",
@@ -50,7 +50,7 @@ const Review = () => {
       id: 5,
       name: "Jhon snow",
       role: "customer",
-      img: "https://i.ibb.co/ccktnRC/g1.png",
+      img: "https://i.ibb.co/mtP8jMk/360-F-214746128-31-Jkea-P6r-U0-Nzzzd-FC4kh-Gkmqc8noe6h.jpg",
       borderImg: "https://i.ibb.co/z4bb3p1/bg-best.png",
       message:
         "Well-produced, informative, casual, non-intimidating and so much fun. Just perfect.",

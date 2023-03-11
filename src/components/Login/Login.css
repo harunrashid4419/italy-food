@@ -15,26 +15,41 @@
 .login-section .login{
     width: 50%;
     margin: 50px auto;
-    text-align: center;
     margin-left: 10%;
     padding: 0 50px;
 }
 .login-section .login h3{
-    color: black;
-    font-size: 32px;
+    color: #3f3f3f;
+    font-size: 40px;
     font-weight: 700;
-}
-.login-section .login span{
-    color: black;
-    font-size: 16px;
-    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
 }
 .login-section .login input{
-    border-bottom: 1px solid #0000003d;
-    border-radius: 0px;
+    border: 1px solid #0000003d;
+    border-radius: 5px;
 }
 .login-section .login input::placeholder{
     padding-left: 10px;
+}
+.login-section .login span{
+    color: #333333;
+    pointer-events: none;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    transition: .3s ease-out;
+}
+.login-section .login input:valid ~ span,
+.login-section .login input:focus ~ span{
+    transform: translateY(-38px);
+    padding: 0 7px;
+    background-color: white;
+    color: #6A1818;
 }
 .login-section .login input:focus{
     border: none;
@@ -42,20 +57,16 @@
 .form-icon{
     position: relative;
 }
-.login-section .login .icon{
-    position: absolute;
-    top: 51px;
-    left: 0;
-    color: #00000094;
-}
 .login-section .forget-pass{
     text-align: right;
 }
-#button  input{
-    background-image: linear-gradient(to right, green , gray);
+#button input{
+    background: linear-gradient(to left, green 50%, black 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
 }
-#button  input:hover{
-    opacity: 90%;
+#button input:hover{
+    background-position: left;
 }
 .login-section .social-login{
     display: flex;
@@ -76,6 +87,7 @@
 }
 .login-section .singup-link{
     margin-top: 15px;
+    text-align: center;
 }
 .login-section .singup-link .link{
     color: green;
@@ -102,9 +114,12 @@
 
 @media screen and (max-width: 576px) {
     .login-section .login {
-        padding: 20px 50px;
+        padding: 20px 20px;
     }
     .login-section .animation .anime{
         width: 200px;
+    }
+    .login-section {
+        padding: 20px 0;
     }
 }
