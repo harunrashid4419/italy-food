@@ -41,8 +41,8 @@ const OurCapacity = () => {
       <div className="capacity-section">
         <h2>Our Capacity</h2>
         <p>
-          We offer wine enthusiasts the largest selection of specialty
-          refrigeration and accessories to bring the wine lifestyle home.
+          We offer food enthusiasts the largest selection of specialty
+          refrigeration and accessories to bring the food lifestyle home.
         </p>
         <div className="capacity">
           {capacityData.map((capacity) => (

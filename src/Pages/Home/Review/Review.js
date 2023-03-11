@@ -67,17 +67,24 @@ const Review = () => {
   ];
   return (
     <div className="container">
-      <Carousel breakPoints={breakPoints} className="slider">
-        {review.map((r) => (
-          <div className="single-slider">
-            <img className="borderImg" src={r.borderImg} alt="customer img" />
-            <img className="men-img" src={r.img} alt="customer img" />
-            <h4>{r.name}</h4>
-            <h5>{r.role}</h5>
-            <q>{r.message}</q>
-          </div>
-        ))}
-      </Carousel>
+      <div className="slider">
+        <h3>What your client says</h3>
+        <p>
+          Our valued customers’ feedback is the measure of our success. We’re
+          honored to serve what may be the world’s most discerning clientele.
+        </p>
+        <Carousel breakPoints={breakPoints}>
+          {review.map((r) => (
+            <div key={r.id} className="single-slider">
+              <img className="borderImg" src={r.borderImg} alt="customer img" />
+              <img className="men-img" src={r.img} alt="customer img" />
+              <h4>{r.name}</h4>
+              <h5>{r.role}</h5>
+              <q>{r.message}</q>
+            </div>
+          ))}
+        </Carousel>
+      </div>
     </div>
   );
 };

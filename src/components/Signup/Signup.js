@@ -88,7 +88,7 @@ const Signup = () => {
           </div>
           <div className="singup-link">
             <p>
-              Already have an account <Link className="link">LogIn</Link>{" "}
+              Already have an account <Link to='/login' className="link">LogIn</Link>{" "}
             </p>
           </div>
         </div>

@@ -5,6 +5,8 @@
 }
 .login-section .animation{
     width: 40%;
+    display: flex;
+    align-items: center;
 }
 .login-section .animation .anime{
     width: 400px;

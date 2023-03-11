@@ -1,7 +1,19 @@
 .slider{
-    background-color: white;
-    padding-bottom: 20px;
+    background-color: whitesmoke;
+    padding: 50px 0 20px 0;
     text-align: center;
+}
+.slider h3{
+    font-size: 30px;
+    font-weight: 700;
+    color: #333333;
+}
+.slider p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #555555;
+    max-width: 550px;
+    margin: 20px auto 50px;
 }
 .slider .single-slider{
     position: relative;
@@ -28,15 +40,22 @@
     color: #333333;
     font-weight: 700;
     margin-top: 15px;
+    text-transform: uppercase;
 }
 .slider h5{
     font-size: 16px;
     color: #999999;
     font-weight: 400;
+    margin: 5px 0;
 }
 .slider q{
     font-size: 14px;
     color: #666666;
     font-weight: 400;
     margin-top: 15px;
+}
+@media screen and (max-width: 576px) {
+    .slider p{
+        max-width: 95%;
+    }
 }
