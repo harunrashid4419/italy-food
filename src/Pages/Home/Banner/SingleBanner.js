@@ -6,7 +6,7 @@ const SingleBanner = ({ singleBanner }) => {
   return (
     <div id={`slide${id}`} className="carousel-item relative w-full">
       <img id="slider-img" src={img} className="w-full" alt="" />
-      <div className="content">
+      <div className="slider-content">
         <h3>{content}</h3>
         <p>{paragraph}</p>
       </div>

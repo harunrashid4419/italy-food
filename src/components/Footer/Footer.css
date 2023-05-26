@@ -1,11 +1,11 @@
-.footer-section .footer {
+.footer-section{
 	background: #F2F1E8;
-	display: flex;
-	flex-wrap: wrap;
-	padding-bottom: 65px;
+	padding: 50px 50px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	position:relative;
 }
-.footer-section .footer::before {
+.footer-section::before {
 	content: '';
 	background-image: url(/src/assets/bg-3.png);
 	height: 7px;
@@ -14,85 +14,108 @@
 	left: 0;
 	position: absolute;
 }
-.footer-section .flex-column {
-	width: 41%;
-	padding-top: 30px;
-	padding-left: 30px;
-}
-.footer-section .flex-column2 {
-	width: 21%;
-	padding-top: 30px;
-	padding-left: 1%;
-}
-.footer-section .flex-column3 {
-	width: 26%;
-	padding-top: 30px;
-	padding-left: 6%;
-}
-.footer-section .flex-column h1 {
-	margin: 0 0 20px 0;
-	font-size: 16px;
-	font-weight: 700;
-	color: #442917;
+.footer-section .about-section h1,
+.footer-section .open-routine h1,
+.footer-section .links h1{
+	font-size: 24px;
+    font-weight: 700;
+    color: #333333;
+	margin-bottom: 25px;
+	padding-bottom: 7px;
 	text-transform: uppercase;
+    position: relative;
 }
-.footer-section .flex-column h2{
-	margin: 0 0 0 0;
+.footer-section .about-section h1::after,
+.footer-section .open-routine h1::after,
+.footer-section .links h1::after{
+	content: '';
+	position: absolute;
+	bottom: 0px;
+    left: 0;
+    border-top: none;
+    height: 3px;
+    width: 100px;
+	background-image: linear-gradient(to right, red, transparent);
+}
+.footer-section .about-section p{
 	font-size: 16px;
-	font-weight: 700;
-	color: #92907c;
+    font-weight: 400;
+    color: #555555;
+	line-height: 30px;
 }
-.footer-section .flex-column p {
-	margin: 10px 0 0 0;
+.footer-section .about-section .social-links{
+	display: flex;
+	padding-top: 20px;
+}
+.footer-section .about-section .social-links svg {
+    color: #555555;
+    padding: 0 15px;
+    background: transparent;
+    border: 1px solid gray;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+	transition: .8s;
+}
+.footer-section .about-section .social-links a{
+	margin-left: 15px;
+}
+.footer-section .about-section .social-links svg:hover{
+	background-color: #EB0029;
+	border: 1px solid #EB0029;
+	color: white;
+}
+.footer-section .about-section .social-links a:first-child{
+	margin-left: 0;
+}
+.footer-section .links{
+	padding-left: 50px;
+}
+.footer-section .links a{
+	display: block;
 	font-size: 16px;
-	font-weight: 400;
-	color: #92907c;
-	line-height: 25px;
+    font-weight: 400;
+    color: #555555;
+	position: relative;
+	width: fit-content;
+	padding: 0 0 10px 25px;
+	transition: .5s;
 }
-.footer-section .flex-column2 h1 {
-	margin: 0 0 22px 0;
-	font-size: 16px;
-	font-weight: 700;
-	color: #442917;
-	text-transform: uppercase;
+.footer-section .links a:hover{
+	color: red;
 }
-.footer-section .flex-column2 iframe{
-	border: 1px solid;
-    padding: 5px;
-    width: 100%;
-    height: 100%;
+.footer-section .links a::before{
+	content: '\f061';
+	position: absolute;
+	font-family: fontawesome;
+	left: 0;
+	top: 0;
+	font-weight: 600;
+	color: black;
+	transition: .5s;
 }
-.footer-section .flex-column img{
-	float: left;
-	margin-right: 15px;
-	padding: 4px;
-	border: 1px solid #bbb;
+.footer-section .links a:hover:before{
+	margin-left: 5px;
+	color: red;
 }
-.footer-section .flex-column3 h1 {
-	margin: 0 0 20px 0;
-	font-size: 16px;
-	font-weight: 700;
-	color: #442917;
-	text-transform: uppercase;
-}
-.footer-section .flex-column3 p{
+.footer-section .open-routine p{
 	font-size: 16px;
 	font-weight: 400;
 	color: #92907c;
 	margin-bottom: 10px;
 }
-.footer-section .flex-column3 span{
+.footer-section .open-routine span{
 	font-size: 18px;
 	font-weight: 700;
 	color: #92907c;
 }
-.footer-section .flex-column3 h2{
+.footer-section .open-routine h2{
 	font-size: 18px;
 	font-weight: 700;
 	color: #92907c;
 	margin:21px 0 0 0;
 }
-.footer-section .flex-column3 h3{
+.footer-section .open-routine h3{
 	font-size: 16px;
 	font-weight: 400;
 	color: #92907c;
@@ -100,22 +123,22 @@
 }
 
 @media screen and (max-width: 992px) {
-    .footer-section .footer {
-        display: block;
-    }
-    .footer-section .flex-column {
-        width: 100%;
-    }
-    .footer-section .flex-column2 {
-        width: 100%;
-        padding: 30px 30px 0 30px;
-    }
-    .footer-section .flex-column2 iframe {
-        height: 300px;
-    }
-    .footer-section .flex-column3 {
-        width: 100%;
-        padding-top: 50px;
-        padding-left: 30px;
-    }
+    .footer-section{
+		padding: 50px 10px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.footer-section{
+		padding: 50px 50px;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.footer-section .links {
+		padding-left: 0px;
+		padding: 30px 0;
+	}
+}
+@media screen and (max-width: 576px) {
+	.footer-section{
+		padding: 30px 30px;
+	}
 }

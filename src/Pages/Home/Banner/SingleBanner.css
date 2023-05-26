@@ -1,7 +1,7 @@
 #slider-img{
     position: relative;
 }
-.content{
+.slider-content{
     background-color: #000000a6;
     max-width: 505px;
     position: absolute;
@@ -11,14 +11,14 @@
     padding: 20px;
     border-radius: 10px;
 }
-.content h3{
+.slider-content h3{
     font-size: 22px;
     font-weight: 700;
     margin: 0px 0 48px 0;
     color: #ffffff;
     line-height: 25px;
 }
-.content p{
+.slider-content p{
     font-size: 16px;
     font-weight: 400;
     margin: 0 0 0 0;
@@ -26,8 +26,8 @@
     line-height: 25px;
 }
 
-@media screen and (max-width: 776px) {
-    .content{
+@media screen and (max-width: 767px) {
+    .slider-content{
         width: 100%;
         top: 50%;
         left: 50%;
@@ -35,11 +35,11 @@
     }
 }
 @media screen and (max-width: 576px) {
-    .content h3 {
+    .slider-content h3 {
         margin: 0px 0 15px 0;
         font-size: 18px;
     }
-    .content p{
+    .slider-content p{
         font-size: 14px;
         line-height: 22px;
     }

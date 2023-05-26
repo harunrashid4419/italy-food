@@ -8,7 +8,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [open, setOpen] = useState(false);
-  
+
   const handleLogOut = () => {
     logOut()
       .then(() => {
@@ -29,7 +29,11 @@ const Navbar = () => {
           </Link>
         )}
       </div>
-      <div className={`md:static absolute duration-500 ease-in ${open ? "" : "left-[-810px]"}`}>
+      <div
+        className={`md:static absolute duration-500 ease-in z-10 ${
+          open ? "" : "left-[-830px]"
+        }`}
+      >
         <div className="navbar-section">
           <div className="main-menu">
             <ul className="main">
@@ -37,7 +41,7 @@ const Navbar = () => {
                 <Link to="/">home</Link>
               </li>
               <li className="location">
-                <a href="#footer">location</a>
+                <Link to='/foods'>Food</Link>
               </li>
               <li className="blog">
                 <Link>blog</Link>
@@ -49,10 +53,10 @@ const Navbar = () => {
                 <Link>gallery</Link>
               </li>
               <li className="dashboard">
-                <Link>About</Link>
+                <a href="#contact">location</a>
               </li>
               <li className="order">
-                {user ? <Link>dashboard</Link> : <a href='#menu'>Menu</a>}
+                {user ? <Link>dashboard</Link> : <a href="#contact">Contact</a>}
               </li>
               <li className="login">
                 {user ? (

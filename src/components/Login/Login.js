@@ -4,8 +4,6 @@ import loginAnimation from "../../../src/assets/login.json";
 import { useForm } from "react-hook-form";
 import "./Login.css";
 import {
-  FaUser,
-  FaLock,
   FaGoogle,
   FaFacebookF,
   FaTwitter,

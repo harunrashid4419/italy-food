@@ -1,0 +1,69 @@
+.food-details{
+    background-color: white;
+    padding: 30px 10px;
+    display: flex;
+    align-items: center;
+}
+.food-details .images{
+    width: 45%;
+}
+.food-details .images img{
+    width: 90%;
+    margin: 0 auto;
+}
+.food-details .content{
+    width: 50%;
+    margin-left: 5%;
+}
+.food-details .content h3{
+    color: #272727;
+    font-size: 32px;
+    font-weight: bold;
+}
+.food-details .content h4{
+    font-size: 28px;
+    font-weight: 600;
+    color: #C9000B;
+    margin: 10px 0;
+}
+.food-details .content .rating{
+    margin-bottom: 25px;
+}
+.food-details .content .rating svg{
+    font-size: 20px;
+    color: #FCAD02;
+    margin-left: 3px;
+}
+.food-details .content .rating p{
+    margin-left: 10px;
+    color: #868686;
+    font-size: 14px;
+}
+.food-details .content .description{
+    font-size: 15px;
+    color: #868686;
+    margin-top: 25px;
+}
+.food-details .content h5{
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+.food-details .content span{
+    color: #868686;
+}
+.food-details .content button{
+    background-color: transparent;
+    border: 1px solid #C9000B;
+    padding: 12px 60px;
+    margin-top: 30px;    
+    color: white;
+    font-weight: 600;
+    background: linear-gradient(to left, #C9000B 50%, black 50%) right;
+    background-size: 200%;
+    position: relative;
+    transition: .5s ease-out;
+}
+.food-details .content button:hover{
+    background-position: left;
+    border: 1px solid black;
+}

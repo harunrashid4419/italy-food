@@ -1,0 +1,109 @@
+.main-foods{
+    background-color: white;
+    padding: 50px 10px;
+    text-align: center;
+}
+.main-foods h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: #3f3f3f;
+    margin: 0px 0 37px 0;
+    position: relative;
+}
+.main-foods h2::after{
+    content: '';
+    width: 93px;
+    height: 5px;
+    position: absolute;
+    background: #444444;
+    left: 50%;
+    top: 146%;
+    transform: translate(-50%, -146%);
+}
+.main-foods .top-paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    color: #3f3f3f;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+.main-foods button{
+    padding: 14px 71px;
+    color: white;
+    margin-top: 30px;
+    background: linear-gradient(to left, #6A1818 50%, black 50%) right;
+    background-size: 200%;
+    position: relative;
+    transition: .5s ease-out;
+}
+.main-foods button:hover{
+    background-position: left;
+}
+.main-foods .foods-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.main-foods .foods-section .single-food{
+    border: 3px dashed #f2f2f2;
+    border-radius: 10px;
+    padding: 20px 15px;
+    transition: .5s;
+}
+.main-foods .foods-section .single-food:hover{
+    border: 3px dashed #C9000B;
+    border-radius: 5px;
+}
+.main-foods .foods-section .single-food img{
+    width: 100%;
+}
+.main-foods .foods-section .single-food h3{
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+}
+.main-foods .foods-section .single-food h4{
+    font-size: 18px;
+    color: #C9000B;
+    font-weight: bold;
+}
+.main-foods .foods-section .single-food button {
+    margin: 10px auto;
+    padding: 12px 71px;
+    color: #C9000B;
+    border: 1px solid #C9000B;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to left, transparent 50%, black 50%) right;
+    background-size: 200%;
+    position: relative;
+    transition: .5s ease-out;
+}
+.main-foods .foods-section .single-food .arrow-icon{
+    padding-left: 4px;
+    transition: .5s;
+}
+.main-foods .foods-section .single-food button:hover{
+    background-position: left;
+    border: 1px solid black;
+    color: white;
+}
+.main-foods .foods-section .single-food button:hover .arrow-icon{
+    transform: translateX(8px);
+}
+@media screen and (max-width: 1200px) {
+    .main-foods .foods-section{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .main-foods .foods-section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 767px) {
+    .main-foods .foods-section{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

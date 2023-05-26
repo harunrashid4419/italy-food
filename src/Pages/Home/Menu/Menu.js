@@ -62,7 +62,7 @@ const Menu = () => {
               several pages and display them side by side, just as on a paper
               menucard!
             </p>
-            <Link>
+            <Link to='/fastFood'>
               <button>Detalis</button>
             </Link>
           </div>

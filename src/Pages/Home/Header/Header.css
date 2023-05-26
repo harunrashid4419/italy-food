@@ -46,7 +46,7 @@
     opacity: 70%;
 }
 
-@media screen and (max-width: 776px) {
+@media screen and (max-width: 767px) {
     .header-section .main-header{
         display: block;
     }

@@ -7,7 +7,7 @@ import { CiLocationOn } from "react-icons/ci";
 const Contact = () => {
   return (
     <div className="container">
-      <div className="contact-section">
+      <div id='contact' className="contact-section">
         <h1>Contact Us & Our Location</h1>
         <p>
           If you need to contact us, you can contact us in the contact section

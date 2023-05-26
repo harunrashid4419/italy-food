@@ -46,7 +46,7 @@
 }
 .login-section .login input:valid ~ span,
 .login-section .login input:focus ~ span{
-    transform: translateY(-38px);
+    transform: translateY(-39px);
     padding: 0 7px;
     background-color: white;
     color: #6A1818;
@@ -97,7 +97,7 @@
 .login-section .singup-link .link:hover{
     opacity: 70%;
 }
-@media screen and (max-width: 776px) {
+@media screen and (max-width: 767px) {
     .login-section {
         display: block;
     }

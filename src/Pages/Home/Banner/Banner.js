@@ -34,7 +34,7 @@ const Banner = () => {
 
   return (
     <div className="container">
-      <div className="carousel w-full">
+      <div id='slider' className="carousel w-full">
         {banner.map((singleBanner) => (
           <SingleBanner
             key={singleBanner.id}

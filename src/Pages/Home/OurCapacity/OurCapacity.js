@@ -38,7 +38,7 @@ const OurCapacity = () => {
   ];
   return (
     <div className="container">
-      <div className="capacity-section">
+      <div id='capacity' className="capacity-section">
         <h2>Our Capacity</h2>
         <p>
           We offer food enthusiasts the largest selection of specialty

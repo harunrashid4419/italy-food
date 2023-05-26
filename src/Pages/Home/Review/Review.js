@@ -67,7 +67,7 @@ const Review = () => {
   ];
   return (
     <div className="container">
-      <div className="slider">
+      <div id="review" className="slider">
         <h3>What your client says</h3>
         <p>
           Our valued customers’ feedback is the measure of our success. We’re
