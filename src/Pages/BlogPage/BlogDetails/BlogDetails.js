@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import "./BlogDetails.css";
-import bannerImg from "../../../assets/blog-banner.jpg";
+import bannerImg from "../../../assets/banner.png";
 import aboutImg from "../../../assets/reservation.jpg";
 import {
   FaCalendarAlt,
@@ -53,6 +53,7 @@ const BlogDetails = () => {
               {sixthPera && <p>{sixthPera}</p>}
               {seventhPera && <p>{seventhPera}</p>}
               {eightPera && <p>{eightPera}</p>}
+              <p>Share:</p>
               <div className="blog-icon">
                 <Link>
                   <FaFacebookF />

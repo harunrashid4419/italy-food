@@ -9,7 +9,7 @@ const AllFood = () => {
   const { data: foods = [] } = useQuery({
     queryKey: ["foods"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/allFoods");
+      const res = await fetch("https://italy-food-server.vercel.app/allFoods");
       const data = res.json();
       return data;
     },

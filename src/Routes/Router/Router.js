@@ -15,7 +15,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/blog')
+                loader: () => fetch('https://italy-food-server.vercel.app/blog')
             },
             {
                 path: '/login',
@@ -32,12 +32,12 @@ const router = createBrowserRouter([
             {
                 path: '/foodDetails/:id',
                 element: <FoodDetails></FoodDetails>,
-                loader: async({params}) => fetch(`http://localhost:5000/foodDetails/${params.id}`)
+                loader: async({params}) => fetch(`https://italy-food-server.vercel.app/foodDetails/${params.id}`)
             },
             {
                 path: '/blogDetails/:id',
                 element: <BlogDetails></BlogDetails>,
-                loader: async ({params}) => fetch(`http://localhost:5000/blogDetails/${params.id}`)
+                loader: async ({params}) => fetch(`https://italy-food-server.vercel.app/blogDetails/${params.id}`)
             }
         ]
     }

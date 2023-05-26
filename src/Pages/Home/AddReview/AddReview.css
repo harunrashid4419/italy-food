@@ -1,0 +1,102 @@
+.show-review{
+    background-color: white;
+    padding: 20px 10px;
+}
+.show-review .main-review{
+    margin: 0 50px;
+}
+.show-review .review-section{
+    display: flex;
+    justify-content: space-between;
+}
+.show-review .review-section .header{
+    display: flex;
+    align-items: center;
+}
+.show-review .review-section .header svg{
+    font-size: 50px;
+    margin-right: 20px;
+}
+
+.review-section{
+    background-color: white;
+    padding: 20px 10px;
+}
+.review-section h3 {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 14px;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #C9000B;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 18px 40px;
+    border-radius: 31pc;
+}
+.review-section svg{
+    margin-right: 5px;
+}
+.review-section .paragraph{
+    font-size: 15px;
+    color: #272727;
+    margin-top: 20px;
+}
+.review-section .rating{
+    display: flex;
+    align-items: center;
+}
+.review-section .rating p{
+    font-size: 15px;
+    color: #272727;
+    margin-right: 10px;
+}
+.review-section .review{
+    display: flex;
+}
+.review-section .review .left{
+    width: 50%;
+}
+.review-section .review input{
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+.review-section .review .submit{
+    border: 1px solid #C9000B;
+    cursor: pointer;
+    background: linear-gradient(to left, transparent 50%, black 50%) right;
+    background-size: 200%;
+    position: relative;
+    transition: .5s ease-out;
+}
+.review-section .review .submit:hover{
+    background-position: left;
+    border: 1px solid black;
+    color: white;
+}
+.review-section .review .textarea{
+    width: 48%;
+    margin-left: 2%;
+    padding: 0;
+}
+.review-section .review .textarea textarea{
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    height: 208px;
+    padding: 15px 20px;
+}
+@media screen and (max-width: 767px) {
+    .review-section .review{
+        flex-direction: column-reverse;
+    }
+    .review-section .review .left{
+        width: 100%;
+        margin-top: 15px;
+    }
+    .review-section .review .textarea{
+        width: 100%;
+        margin-left: 0;
+    }
+}

@@ -2,16 +2,18 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import "./FoodDetails.css";
 import DetailBanner from "./DetailBanner";
-import { Navigation, Pagination } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { BsFillStarFill } from "react-icons/bs";
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import AddReview from "../AddReview/AddReview";
 
 const FoodDetails = () => {
   const food = useLoaderData();
-  const { name, img, img1, category, description, price } = food;
+  const { name, img, img1, category, description, price, _id } = food;
   return (
     <>
       <DetailBanner></DetailBanner>
@@ -44,10 +46,25 @@ const FoodDetails = () => {
             </div>
             <hr />
             <p className="description">{description}</p>
-            <h5><span>Category:</span> {category}</h5>
+            <h5>
+              <span>Category:</span> {category}
+            </h5>
             <button>Order Now</button>
+            <hr />
+            <div className="share">
+              <span>
+                <FaFacebookF /> Facebook
+              </span>
+              <span>
+                <FaTwitter /> Twitter
+              </span>
+              <span>
+                <FaLinkedinIn /> LinkedIn
+              </span>
+            </div>
           </div>
         </div>
+        <AddReview _id={_id} name={name}></AddReview>
       </div>
     </>
   );

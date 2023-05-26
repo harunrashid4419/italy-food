@@ -1,12 +1,23 @@
 .banner-image{
     position: relative;
 }
+.banner-image::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #000000b8;
+    top: 0;
+    left: 0;
+}
 .banner-image .content {
     position: absolute;
     top: 55%;
     left: 50%;
     transform: translate(-50%, -55%);
     text-align: center;
+    width: 100%;
+    z-index: 9;
 }
 .banner-image .content p{
     font-size: 20px;
@@ -30,4 +41,20 @@
 }
 .banner-image .content a:hover{
     color: #C9000B;
+}
+@media screen and (max-width: 767px) {
+    .banner-image .content h3 {
+        font-size: 32px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .banner-image .content h3 {
+        font-size: 22px;
+    }
+    .banner-image .content p {
+        font-size: 16px;
+    }
+    .banner-image .content h4 {
+        font-size: 16px;
+    }
 }
