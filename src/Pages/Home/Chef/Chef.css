@@ -1,8 +1,100 @@
-.chef{
-    background-color: white;
+.chef-section{
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 50px 10px;
 }
-element.style {
-    width: 1400px;
-    opacity: 1;
-    transform: translate3d(-1160px, 0px, 0px);
+.chef-section h1{
+    font-size: 35px;
+    color: #222222;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.chef-section p{
+    max-width: 550px;
+    margin: 10px auto;
+    font-size: 14px;
+    color: #555555;
+}
+.chef-section .slider{
+    padding: 20px 0 50px 0;
+    background-color: whitesmoke;
+}
+.chef-section .chef-border{
+    position: relative;
+}
+.chef-section .chef-border::after {
+    content: '';
+    position: absolute;
+    height: 99%;
+    width: 1px;
+    background: #C9000B;
+    top: 20px;
+    right: 14px;
+}
+.chef-section .chef{
+    border-bottom: 1px solid #C9000B;
+    position: relative;
+}
+.chef-section .chef img{
+    margin: 0 auto;
+    position: relative;
+}
+.chef-section .chef::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #C9000B;
+    left: 0;
+    bottom: 93%;
+    transform: translate(0, -95%);
+}
+.chef-section .chef::after {
+    content: '';
+    position: absolute;
+    height: 99%;
+    width: 1px;
+    background-color: #C9000B;
+    left: 14px;
+    top: 20px;
+}
+.chef-section .chef .social-media {
+    display: flex;
+    justify-content: center;
+    border: 2px solid #C9000B;
+    margin: 0 30px;
+}
+.chef-section .chef .social-media svg{
+    color: #CCCCCC;
+    margin: 15px 10px;
+    font-size: 18px;
+    transition: .5s ease-in-out;
+}
+.chef-section .chef .social-media svg:hover{
+    color: #C9000B;
+}
+.chef-section .chef h1{
+    color: #666666;
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.chef-section .chef h2{
+    color: #666666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+
+.swiper-button-prev::after{
+    display: none;
+}
+.swiper-button-next::after{
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .chef-section p{
+        max-width: 100%;
+    }
 }

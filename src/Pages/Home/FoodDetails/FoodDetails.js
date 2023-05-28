@@ -2,7 +2,7 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import "./FoodDetails.css";
 import DetailBanner from "./DetailBanner";
-import { Autoplay, Navigation, Pagination } from "swiper";
+import { Navigation, } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
