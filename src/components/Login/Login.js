@@ -3,11 +3,7 @@ import Lottie from "lottie-react";
 import loginAnimation from "../../../src/assets/login.json";
 import { useForm } from "react-hook-form";
 import "./Login.css";
-import {
-  FaGoogle,
-  FaFacebookF,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaGoogle, FaFacebookF, FaTwitter } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../UserContext/UserContext";
 import { toast } from "react-hot-toast";
@@ -68,16 +64,16 @@ const Login = () => {
               <input className="btn w-full" value="Login" type="submit" />
             </div>
           </form>
-          <div className="social-login">
-            <Link>
-              <FaGoogle className="social-icon" />
-            </Link>
-            <Link>
-              <FaFacebookF className="social-icon" />
-            </Link>
-            <Link>
-              <FaTwitter className="social-icon" />
-            </Link>
+          <div className="flex flex-col w-full border-opacity-50">
+            <div className="divider">OR</div>
+          </div>
+          <div id="google-signup">
+            <FaGoogle id="google" />
+            <p>Login with google</p>
+          </div>
+          <div id="facebook-signup">
+            <FaFacebookF id="facebook" />
+            <p>Login with facebook</p>
           </div>
           <div className="singup-link">
             <p>

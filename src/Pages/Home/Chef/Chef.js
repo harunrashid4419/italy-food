@@ -32,7 +32,7 @@ const Chef = () => {
       role: "Main Cheef",
     },
     {
-      id: "3",
+      _id: "3",
       img: "https://i.ibb.co/3Tpxmkj/chef4.png",
       name: "Rose Dawson",
       facebook: "https://www.facebook.com/",
@@ -42,7 +42,7 @@ const Chef = () => {
       role: "Junior Chef",
     },
     {
-      id: "4",
+      _id: "4",
       img: "https://i.ibb.co/ZW4w3wy/chef5.png",
       name: "Rose Dawson",
       facebook: "https://www.facebook.com/",
@@ -52,7 +52,7 @@ const Chef = () => {
       role: "Major Cheef",
     },
     {
-      id: "5",
+      _id: "5",
       img: "https://i.ibb.co/tJPQks0/chef1.png",
       name: "Rose Dawson",
       facebook: "https://www.facebook.com/",
@@ -116,7 +116,7 @@ const Chef = () => {
           {chefs &&
             chefs?.map((chef) => (
               <SwiperSlide className="slider">
-                <div className="chef-border">
+                <div key={chef._id} className="chef-border">
                   <div className="chef">
                     <img src={chef?.img} alt="chef-img" />
                     <div className="social-media">

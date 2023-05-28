@@ -1,6 +1,6 @@
 .main-singup{
     background-color: white;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 .main-singup .signup{
@@ -12,17 +12,14 @@
     font-size: 40px;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     letter-spacing: 5px;
 }
-.main-singup .signup span {
-	color: black;
-	font-size: 16px;
-	font-weight: 400;
-}
 .main-singup .signup input {
-    border-bottom: 1px solid #0000003d;
-	border-radius: 0px;
+    background: #EEEEEE;
+	border-radius: 5px;
+    padding: 25px 50px;
+    border: 1px solid #0000003d
 }
 .main-singup .signup input:focus{
     border: none;
@@ -30,14 +27,12 @@
 .form-icon{
     position: relative;
 }
-.main-singup .signup .icon{
+.main-singup .signup .icon {
     position: absolute;
-    top: 51px;
-    left: 0;
+    top: 15px;
     color: #00000094;
-}
-.main-singup .signup input::placeholder{
-    padding-left: 10px;
+    left: 15px;
+    font-size: 20px;
 }
 #button  input{
     background: linear-gradient(to left, #6A1818  50%, black 50%) right;
@@ -47,22 +42,54 @@
 #button  input:hover{
     background-position: left;
 }
-.main-singup .social-login{
+#google-signup{
+    background-color: #F54234;
     display: flex;
-    justify-content: center;
-    padding-top: 30px;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
 }
-.main-singup .social-login .social-icon{
-    height: 50px;
-    width: 50px;
-    background-image: linear-gradient(to right, #008000b8 , gray);
-    padding: 13px;
-    border-radius: 50%;
+#google-signup p{
+    margin: 0 auto;
     color: white;
-    margin: 0 10px;
+    text-transform: uppercase;
+    transition: .5s;
 }
-.main-singup .social-login .social-icon:hover{
-    opacity: 70%;
+#google-signup p:hover{
+    opacity: 80%;
+}
+#google {
+    background-color: #4ba2e4;
+    height: 50px;
+    font-size: 28px;
+    width: 60px;
+    padding: 12px;
+    color: white;
+}
+#facebook-signup{
+    background-color: #3A5999;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+#facebook-signup p{
+    margin: 0 auto;
+    color: white;
+    text-transform: uppercase;
+    transition: .5s;
+}
+#facebook-signup p:hover{
+    opacity: 80%;
+}
+#facebook {
+    background-color: #1D3A62;
+    height: 50px;
+    font-size: 28px;
+    width: 60px;
+    padding: 12px;
+    color: white;
 }
 .main-singup .singup-link{
     margin-top: 15px;

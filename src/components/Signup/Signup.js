@@ -1,99 +1,100 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-import { FaGithub, FaGoogle, FaLock, FaTwitter, FaUser, FaUserTie } from "react-icons/fa";
+import { FaFacebookF, FaGoogle, FaLock, FaUser } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../UserContext/UserContext";
 import "./Signup.css";
+import SignupBanner from "./SignupBanner";
 
 const Signup = () => {
   const { handleSubmit, register } = useForm();
-  const {createUser, updateUser} = useContext(AuthContext);
+  const { createUser, updateUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const handleSignUp = event =>{
-    console.log(event)
+  const handleSignUp = (event) => {
+    console.log(event);
     createUser(event.email, event.password)
-      .then(result =>{
+      .then((result) => {
         const user = result.user;
-        toast.success('Sign Up Successfully');
+        toast.success("Sign Up Successfully");
         console.log(user);
-        navigate('/');
+        navigate("/");
         const userInfo = {
-          displayName: event.name
+          displayName: event.name,
         };
         updateUser(userInfo)
-          .then(result => {console.log(result.user)})
-          .catch(error => console.error(error)) 
+          .then((result) => {
+            console.log(result.user);
+          })
+          .catch((error) => console.error(error));
       })
-      .catch(error => console.error(error));
-  }
+      .catch((error) => console.error(error));
+  };
 
   return (
-    <div className="container">
-      <div className="main-singup">
-        <div className="signup">
-          <h3>SingUp</h3>
-          <form onSubmit={handleSubmit(handleSignUp)}>
-            <div className="form-control mb-5 form-icon">
-              <label className="label">
-                <span className="label-text text-white">Full Name</span>
-              </label>
-              <FaUserTie className="icon" />
-              <input
-                type="text"
-                {...register("name")}
-                placeholder="Type your Full Name"
-                className="input"
-              />
+    <>
+      <SignupBanner></SignupBanner>
+      <div className="container">
+        <div className="main-singup">
+          <div className="signup">
+            <h3>SingUp</h3>
+            <form onSubmit={handleSubmit(handleSignUp)}>
+              <div className="form-control mb-5 form-icon">
+                <FaUser className="icon" />
+                <input
+                  type="text"
+                  {...register("name")}
+                  placeholder="Full Name"
+                  className="input"
+                />
+              </div>
+              <div className="form-control mb-5 form-icon">
+                <AiOutlineMail className="icon" />
+                <input
+                  type="email"
+                  {...register("email")}
+                  placeholder="Email"
+                  className="input"
+                />
+              </div>
+              <div className="form-control mb-5 form-icon">
+                <FaLock className="icon" />
+                <input
+                  type="password"
+                  {...register("password")}
+                  placeholder="Password"
+                  className="input"
+                />
+              </div>
+              <div id="button" className="mt-3">
+                <input className="btn w-full" value="SignUp" type="submit" />
+              </div>
+            </form>
+            <div className="flex flex-col w-full border-opacity-50">
+              <div className="divider">OR</div>
             </div>
-            <div className="form-control mb-5 form-icon">
-              <label className="label">
-                <span className="label-text text-white">UserName</span>
-              </label>
-              <FaUser className="icon" />
-              <input
-                type="email"
-                {...register("email")}
-                placeholder="Type your username"
-                className="input"
-              />
+            <div id="google-signup">
+              <FaGoogle id="google" />
+              <p>Login with google</p>
             </div>
-            <div className="form-control mb-5 form-icon">
-              <label className="label">
-                <span className="label-text text-white">Password</span>
-              </label>
-              <FaLock className="icon" />
-              <input
-                type="password"
-                {...register("password")}
-                placeholder="Type your password"
-                className="input"
-              />
+            <div id="facebook-signup">
+              <FaFacebookF id="facebook" />
+              <p>Login with facebook</p>
             </div>
-            <div id="button" className="mt-3">
-              <input className="btn w-full" value="SignUp" type="submit" />
+            <div className="singup-link">
+              <p>
+                Already have an account{" "}
+                <Link to="/login" className="link">
+                  LogIn
+                </Link>{" "}
+              </p>
             </div>
-          </form>
-          <div className="social-login">
-            <Link>
-              <FaGoogle className="social-icon" />
-            </Link>
-            <Link>
-              <FaGithub className="social-icon" />
-            </Link>
-            <Link>
-              <FaTwitter className="social-icon" />
-            </Link>
-          </div>
-          <div className="singup-link">
-            <p>
-              Already have an account <Link to='/login' className="link">LogIn</Link>{" "}
-            </p>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
