@@ -45,7 +45,7 @@ const OurCapacity = () => {
           refrigeration and accessories to bring the food lifestyle home.
         </p>
         <div className="capacity">
-          {capacityData.map((capacity) => (
+          {capacityData?.map((capacity) => (
             <div className="single-capacity" key={capacity.id}>
               <img className="img" src={capacity.img} alt="border-img" />
               <img className="icon" src={capacity.icon} alt="icon" />

@@ -6,6 +6,7 @@ import BlogDetails from "../../Pages/BlogPage/BlogDetails/BlogDetails";
 import Home from "../../Pages/Home/Home/Home";
 import FoodDetails from "../../Pages/Home/FoodDetails/FoodDetails";
 import AllFood from "../../Pages/AllFoodPage/AllFood/AllFood";
+import Blog from "../../Pages/BlogPage/Blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
                 path: '/blogDetails/:id',
                 element: <BlogDetails></BlogDetails>,
                 loader: async ({params}) => fetch(`https://italy-food-server.vercel.app/blogDetails/${params.id}`)
+            },
+            {
+                path: "/blogs",
+                element: <Blog></Blog>,
+                loader: () => fetch('https://italy-food-server.vercel.app/allBlog')
             }
         ]
     }

@@ -11,7 +11,7 @@ const TopBlog = () => {
         <h2>OUR BLOG</h2>
         <h1>Read latest news</h1>
         <div className="blogs">
-          {blogs.map((blog) => (
+          {blogs?.map((blog) => (
             <SingleBlog key={blog._id} blog={blog}></SingleBlog>
           ))}
         </div>

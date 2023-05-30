@@ -38,58 +38,13 @@
     background: linear-gradient(to left, #6A1818  50%, black 50%) right;
     background-size: 200%;
     transition: .5s ease-out;
+    padding: 17px 0 12px 0;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;    
 }
 #button  input:hover{
     background-position: left;
-}
-#google-signup{
-    background-color: #F54234;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 5px;
-}
-#google-signup p{
-    margin: 0 auto;
-    color: white;
-    text-transform: uppercase;
-    transition: .5s;
-}
-#google-signup p:hover{
-    opacity: 80%;
-}
-#google {
-    background-color: #4ba2e4;
-    height: 50px;
-    font-size: 28px;
-    width: 60px;
-    padding: 12px;
-    color: white;
-}
-#facebook-signup{
-    background-color: #3A5999;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    margin-top: 15px;
-    border-radius: 5px;
-}
-#facebook-signup p{
-    margin: 0 auto;
-    color: white;
-    text-transform: uppercase;
-    transition: .5s;
-}
-#facebook-signup p:hover{
-    opacity: 80%;
-}
-#facebook {
-    background-color: #1D3A62;
-    height: 50px;
-    font-size: 28px;
-    width: 60px;
-    padding: 12px;
-    color: white;
 }
 .main-singup .singup-link{
     margin-top: 15px;
@@ -102,6 +57,12 @@
 }
 .main-singup .singup-link .link:hover{
     opacity: 70%;
+}
+#eye-icon {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translate(-3%, -50%);
 }
 
 @media screen and (max-width: 767px) {

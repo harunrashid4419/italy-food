@@ -74,7 +74,7 @@ const Review = () => {
           honored to serve what may be the world’s most discerning clientele.
         </p>
         <Carousel breakPoints={breakPoints}>
-          {review.map((r) => (
+          {review?.map((r) => (
             <div key={r.id} className="single-slider">
               <img className="borderImg" src={r.borderImg} alt="customer img" />
               <img className="men-img" src={r.img} alt="customer img" />

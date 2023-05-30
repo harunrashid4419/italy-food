@@ -1,6 +1,6 @@
 import React from "react";
 import "./SingleBlog.css";
-import { FaAngleRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const SingleBlog = ({ blog }) => {
@@ -25,7 +25,7 @@ const SingleBlog = ({ blog }) => {
         </p>
         <Link to={`../blogDetails/${_id}`}>
           <button>
-            Read More <FaAngleRight />
+            Read More <FaArrowRight />
           </button>
         </Link>
       </div>

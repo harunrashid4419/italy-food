@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Lottie from "lottie-react";
 import loginAnimation from "../../../src/assets/login.json";
 import { useForm } from "react-hook-form";
 import "./Login.css";
-import { FaGoogle, FaFacebookF, FaTwitter } from "react-icons/fa";
+import { FaGoogle, FaFacebookF, FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../UserContext/UserContext";
 import { toast } from "react-hot-toast";
+import LoginBanner from "./LoginBanner";
+import SignUpOthers from "../SignUpOthers/SignUpOthers";
 
 const Login = () => {
   const { handleSubmit, register } = useForm();
@@ -14,78 +16,81 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
+  const [eye, setEye] = useState(false);
+  const [error, setError] = useState('');
 
   const handleLogin = (event) => {
     login(event.email, event.password)
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setError('');
         toast.success("Successfully Login");
         navigate(from, { replace: true });
       })
-      .catch((error) => console.error);
+      .catch((error) => {
+        console.error(error);
+        setError(error.message);
+      });
   };
 
   return (
-    <div className="container">
-      <div className="login-section">
-        <div className="animation">
-          <Lottie
-            className="anime"
-            animationData={loginAnimation}
-            loop={true}
-          />
-        </div>
-        <div className="login">
-          <h3>Login</h3>
-          <form onSubmit={handleSubmit(handleLogin)}>
-            <div className="form-control mb-8 form-icon">
-              <input
-                type="email"
-                {...register("email")}
-                className="input"
-                required
-              />
-              <span>Email</span>
-            </div>
-            <div className="form-control mb-5 form-icon">
-              <input
-                type="password"
-                {...register("password")}
-                className="input"
-                required
-              />
-              <span>Password</span>
-            </div>
-            <div className="forget-pass">
-              <Link>Forget Password?</Link>
-            </div>
-            <div id="button" className="mt-3">
-              <input className="btn w-full" value="Login" type="submit" />
-            </div>
-          </form>
-          <div className="flex flex-col w-full border-opacity-50">
-            <div className="divider">OR</div>
+    <>
+      <LoginBanner></LoginBanner>
+      <div className="container">
+        <div className="login-section">
+          <div className="animation">
+            <Lottie
+              className="anime"
+              animationData={loginAnimation}
+              loop={true}
+            />
           </div>
-          <div id="google-signup">
-            <FaGoogle id="google" />
-            <p>Login with google</p>
-          </div>
-          <div id="facebook-signup">
-            <FaFacebookF id="facebook" />
-            <p>Login with facebook</p>
-          </div>
-          <div className="singup-link">
-            <p>
-              Don't have any account{" "}
-              <Link to="/signup" className="link">
-                SignUp
-              </Link>{" "}
-            </p>
+          <div className="login">
+            <h3>Login</h3>
+            <form onSubmit={handleSubmit(handleLogin)}>
+              <div className="form-control mb-8 form-icon">
+                <input
+                  type="email"
+                  {...register("email")}
+                  className="input"
+                  required
+                />
+                <span>Email</span>
+              </div>
+              <div className="form-control mb-5 form-icon">
+                <input
+                  type={eye ? "text" : "password"}
+                  {...register("password")}
+                  className="input"
+                  required
+                />
+                <div id="eye-icon" onClick={() => setEye(!eye)}>
+                  {eye ? <FaEye /> : <FaEyeSlash />}
+                </div>
+                <span>Password</span>
+              </div>
+              {error && <p className="text-red-500">{error}</p> }
+              <div className="forget-pass">
+                <Link>Forget Password?</Link>
+              </div>
+              <div id="button" className="mt-3">
+                <input className="btn w-full" value="Login" type="submit" />
+              </div>
+            </form>
+            <SignUpOthers></SignUpOthers>
+            <div className="singup-link">
+              <p>
+                Don't have any account{" "}
+                <Link to="/signup" className="link">
+                  SignUp
+                </Link>{" "}
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

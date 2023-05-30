@@ -21,7 +21,7 @@ const AllFood = () => {
         <div className="main-food-section">
           <p>Showing 1 - {foods.length} item(s)</p>
           <div className="foods-section">
-            {foods.map((food, i) => (
+            {foods?.map((food, i) => (
               <Link
                 to={`../foodDetails/${food._id}`}
                 className="single-food"

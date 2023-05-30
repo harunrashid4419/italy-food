@@ -18,7 +18,7 @@ const Foods = () => {
         <h2>Welcome</h2>
         <p className="top-paragraph">Italy Food Resturent</p>
         <div className="foods-section">
-          {allFood.map((food, i) => (
+          {allFood?.map((food, i) => (
             <Link to={`../foodDetails/${food._id}`} className="single-food" key={i}>
               <img src={food.img} alt="Food images" />
               <h3>{food.name}</h3>

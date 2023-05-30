@@ -37,7 +37,7 @@ const BlogDetails = () => {
             {date}
           </h5>
           <h3>{title}</h3>
-          <p>Blog Details</p>
+          <p> <Link to='/'>Home /</Link> Blog Details</p>
         </div>
       </div>
       <div className="details">

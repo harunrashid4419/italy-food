@@ -86,10 +86,10 @@
 }
 
 
-.swiper-button-prev::after{
+.chef-section .swiper-button-prev::after{
     display: none;
 }
-.swiper-button-next::after{
+.chef-section .swiper-button-next::after{
     display: none;
 }
 

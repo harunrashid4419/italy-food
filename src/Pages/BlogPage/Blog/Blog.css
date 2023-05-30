@@ -1,0 +1,24 @@
+.all-blog-section{
+    background-color: white;
+    padding: 30px 10px;
+}
+.all-blog-section p{
+    margin-bottom: 30px;
+}
+.all-blog-section .main-blog{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .all-blog-section .main-blog{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 767px) {
+    .all-blog-section .main-blog{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
