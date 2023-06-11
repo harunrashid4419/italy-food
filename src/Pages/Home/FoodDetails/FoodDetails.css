@@ -51,19 +51,22 @@
 .food-details .content span{
     color: #868686;
 }
-.food-details .content button{
-    background-color: transparent;
+.food-details .content .order{
+    margin: 30px 0;
+}
+.food-details .content .button{
     border: 1px solid #C9000B;
-    padding: 12px 60px;
-    margin: 30px 0;    
+    padding: 12px 60px;   
     color: white;
     font-weight: 600;
     background: linear-gradient(to left, #C9000B 50%, black 50%) right;
     background-size: 200%;
+    cursor: pointer;
     position: relative;
+    text-transform: uppercase;
     transition: .5s ease-out;
 }
-.food-details .content button:hover{
+.food-details .content .button:hover{
     background-position: left;
     border: 1px solid black;
 }

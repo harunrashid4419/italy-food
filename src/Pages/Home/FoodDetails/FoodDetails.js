@@ -2,7 +2,7 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import "./FoodDetails.css";
 import DetailBanner from "./DetailBanner";
-import { Navigation, } from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import { BsFillStarFill } from "react-icons/bs";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import AddReview from "../AddReview/AddReview";
+import OrderModal from "../../Others/Modal/OrderModal";
 
 const FoodDetails = () => {
   const food = useLoaderData();
@@ -49,7 +50,12 @@ const FoodDetails = () => {
             <h5>
               <span>Category:</span> {category}
             </h5>
-            <button>Order Now</button>
+            <div className="order">
+              <label className="button" htmlFor="order-modal">
+                Order Now
+              </label>
+            </div>
+            <OrderModal name={name} price={price} img={img}></OrderModal>
             <hr />
             <div className="share">
               <span>

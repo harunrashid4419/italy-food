@@ -3,7 +3,7 @@ import Lottie from "lottie-react";
 import loginAnimation from "../../../src/assets/login.json";
 import { useForm } from "react-hook-form";
 import "./Login.css";
-import { FaGoogle, FaFacebookF, FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../UserContext/UserContext";
 import { toast } from "react-hot-toast";

@@ -1,0 +1,39 @@
+.order-modal .tips{
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+.order-modal .tips a{
+    color: green;
+}
+.order-modal h6{
+    font-size: 28px;
+    font-weight: 600;
+    color: #C9000B;
+    margin-bottom: 20px;
+}
+.order-modal input {
+    background: #EEEEEE;
+    border-radius: 5px;
+    border: 1px solid #0000003d;
+    width: 100%;
+    padding: 7px 10px;
+    margin-bottom: 15px;
+}
+.order-modal .submit-button{
+    border: 1px solid #C9000B;
+    padding: 12px 60px;
+    color: white;
+    font-weight: 600;
+    background: linear-gradient(to left, #C9000B 50%, black 50%) right;
+    background-size: 200%;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .5s ease-out;
+}
+.order-modal .submit-button:hover{
+    background-position: left;
+    border: 1px solid black;
+}

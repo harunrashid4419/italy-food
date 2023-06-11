@@ -20,6 +20,19 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-bottom: 30px;
+}
+.topBlog .blog-btn{
+    padding: 17px 71px;
+    color: white;
+    margin-top: 30px;
+    background: linear-gradient(to left, #6A1818 50%, black 50%) right;
+    background-size: 200%;
+    position: relative;
+    transition: .5s ease-out;
+}
+.topBlog .blog-btn:hover{
+    background-position: left;
 }
 
 @media screen and (max-width: 1024px) {

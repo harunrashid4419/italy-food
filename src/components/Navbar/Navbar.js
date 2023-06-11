@@ -41,22 +41,26 @@ const Navbar = () => {
                 <Link to="/">home</Link>
               </li>
               <li className="location">
-                <Link to='/foods'>Food</Link>
+                <Link to="/foods">Food</Link>
               </li>
               <li className="blog">
-                <Link to='/blogs'>blog</Link>
+                <Link to="/blogs">blog</Link>
               </li>
               <li className="news">
-                <Link>news</Link>
+                <a href="#review">Review</a>
               </li>
               <li className="gallery">
-                <Link>gallery</Link>
+                <a href="#chef">Cheef</a>
               </li>
               <li className="dashboard">
-                <a href="#contact">location</a>
+                <a href="#footer">about</a>
               </li>
               <li className="order">
-                {user ? <Link>dashboard</Link> : <a href="#contact">Contact</a>}
+                {user ? (
+                  <Link to="/dashboard">dashboard</Link>
+                ) : (
+                  <a href="#contact">Contact</a>
+                )}
               </li>
               <li className="login">
                 {user ? (

@@ -29,13 +29,12 @@ const Signup = () => {
         console.log(user);
         setError("");
         navigate("/");
+        userAddToDB(event.name, event.email);
         const userInfo = {
           displayName: event.name,
         };
         updateUser(userInfo)
-          .then((result) => {
-            userAddToDB(event.name, event.email);
-          })
+          .then((result) => {})
           .catch((error) => console.error(error));
       })
       .catch((error) => {
@@ -46,6 +45,7 @@ const Signup = () => {
 
   const userAddToDB = (name, email) =>{
     const userInfo = {name, email};
+    console.log(userInfo);
     fetch('https://italy-food-server.vercel.app/users', {
       method: "POST",
       headers: {

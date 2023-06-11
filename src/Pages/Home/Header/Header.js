@@ -7,7 +7,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaTwitter,
-  FaPhoneAlt
+  FaPhoneAlt,
 } from "react-icons/fa";
 
 const Header = () => {
@@ -16,17 +16,31 @@ const Header = () => {
       <div className="container">
         <div className="main-header">
           <div className="left">
-            <p><FiMail className="mail" /> ContacUst@Gmail.com</p>
-            <span><FaPhoneAlt className="phone" /> 08 88888 88888</span>
+            <p>
+              <FiMail className="mail" /> zero@theme.com
+            </p>
+            <span>
+              <FaPhoneAlt className="phone" /> 08 88888 88888
+            </span>
           </div>
           <div className="right">
             <ul>
               <li>
-                <Link><FaTwitter /></Link>
-                <Link><FaFacebook /></Link>
-                <Link><FaGooglePlus /></Link>
-                <Link><FaLinkedinIn /></Link>
-                <Link><FaInstagram /></Link>
+                <Link>
+                  <FaTwitter />
+                </Link>
+                <Link>
+                  <FaFacebook />
+                </Link>
+                <Link>
+                  <FaGooglePlus />
+                </Link>
+                <Link>
+                  <FaLinkedinIn />
+                </Link>
+                <Link>
+                  <FaInstagram />
+                </Link>
               </li>
             </ul>
           </div>

@@ -116,7 +116,7 @@ const Chef = () => {
           {chefs &&
             chefs?.map((chef) => (
               <SwiperSlide key={chef._id} className="slider">
-                <div className="chef-border">
+                <div id='chef' className="chef-border">
                   <div className="chef">
                     <img src={chef?.img} alt="chef-img" />
                     <div className="social-media">

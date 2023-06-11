@@ -1,0 +1,34 @@
+.main-dash {
+    display: flex;
+    background: white;
+    padding: 50px 10px;
+}
+.main-dash .left {
+    width: 25%;
+    background: #1C2938;
+    padding: 20px 10px;
+    border: 1px solid #C9000B;
+    border-radius: 5px;
+}
+.main-dash .right{
+    width: 75%;
+    background: #1C2938;
+    padding: 20px;
+    margin-left: 30px;
+    border: 1px solid #C9000B;
+    border-radius: 5px;
+    color: white;
+}
+@media screen and (max-width: 767px) {
+    .main-dash{
+        display: block;
+    }
+    .main-dash .left {
+        width: 100%;
+    }
+    .main-dash .right{
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+}
