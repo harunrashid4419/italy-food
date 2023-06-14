@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Socket from "../Pages/Home/Socket/Socket";
@@ -6,8 +6,12 @@ import Logo from "../Pages/Home/Logo/Logo";
 import Locations from "../Pages/Home/Locations/Locations";
 import DashboardBanner from "../Pages/Dashboard/DashboardBanner/DashboardBanner";
 import "./DashboardLayou.css";
+import useAdmin from "../Hooks/useAdmin";
+import { AuthContext } from "../UserContext/UserContext";
 
 const DashboardLayout = () => {
+  const { user } = useContext(AuthContext);
+  const [isAdmin] = useAdmin(user?.email);
   return (
     <>
       <Logo></Logo>
@@ -35,11 +39,37 @@ const DashboardLayout = () => {
                   className={({ isActive }) =>
                     isActive ? "bg-[#fff] && text-red-600" : "undefined"
                   }
-                  to="/dashboard/users"
+                  to="/dashboard/addReview"
                 >
-                  Users
+                  Add Review
                 </NavLink>
               </li>
+              {isAdmin && (
+                <>
+                  <li className="text-white text-xl mb-3">
+                    <NavLink
+                      style={{ borderRadius: "5px" }}
+                      className={({ isActive }) =>
+                        isActive ? "bg-[#fff] && text-red-600" : "undefined"
+                      }
+                      to="/dashboard/users"
+                    >
+                      Users
+                    </NavLink>
+                  </li>
+                  <li className="text-white text-xl mb-3">
+                    <NavLink
+                      style={{ borderRadius: "5px" }}
+                      className={({ isActive }) =>
+                        isActive ? "bg-[#fff] && text-red-600" : "undefined"
+                      }
+                      to="/dashboard/addFood"
+                    >
+                      Add Food
+                    </NavLink>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
           <div className="right">

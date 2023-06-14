@@ -12,6 +12,9 @@ import Users from "../../Pages/Dashboard/Users/Users";
 import DashboardLayout from "../../Layout/DashboardLayout";
 import UserOrder from "../../Pages/Dashboard/UserOrder/UserOrder";
 import ErrorPage from "../../Pages/Others/ErrorPage/ErrorPage";
+import AdminRoute from "../AdminRoute/AdminRoute";
+import FoodAdd from "../../Pages/Dashboard/FoodAdd/FoodAdd";
+import UserReview from "../../Pages/Dashboard/UserReview/UserReview";
 
 const router = createBrowserRouter([
   {
@@ -73,7 +76,24 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard/users",
-        element: <Users></Users>,
+        element: (
+          <AdminRoute>
+            <Users></Users>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/addFood",
+        element: (
+          <AdminRoute>
+            {" "}
+            <FoodAdd></FoodAdd>{" "}
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/addReview",
+        element: <UserReview></UserReview>,
       },
     ],
   },

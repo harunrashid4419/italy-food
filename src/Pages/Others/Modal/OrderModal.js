@@ -9,12 +9,12 @@ const OrderModal = ({ name, price, img }) => {
     const form = e.target;
     const userName = e.target.name.value;
     const email = e.target.email.value;
-    const qualtity = e.target.qualtity.value;
-    orderAddToDB(userName, email, qualtity, name, price, img, form);
+    const quantity = e.target.quantity.value;
+    orderAddToDB(userName, email, quantity, name, price, img, form);
   };
 
-  const orderAddToDB = (userName, email, qualtity, name, price, img, form) => {
-    const orderDetails = { userName, email, qualtity, name, price, img };
+  const orderAddToDB = (userName, email, quantity, name, price, img, form) => {
+    const orderDetails = { userName, email, quantity, name, price, img };
     fetch("https://italy-food-server.vercel.app/order", {
       method: "POST",
       headers: {
@@ -59,8 +59,8 @@ const OrderModal = ({ name, price, img }) => {
             />
             <input
               type="number"
-              name="qualtity"
-              placeholder="Qualtity"
+              name="quantity"
+              placeholder="quantity"
               required
             />
             <input

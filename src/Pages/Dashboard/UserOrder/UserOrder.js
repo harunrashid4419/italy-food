@@ -2,9 +2,8 @@ import React from "react";
 import { useContext } from "react";
 import { useQuery } from "react-query";
 import { AuthContext } from "../../../UserContext/UserContext";
-import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa";
 import "./UserOrder.css";
+import Loader from "../../../components/Loader/Loader";
 
 const UserOrder = () => {
   const { user } = useContext(AuthContext);
@@ -18,23 +17,50 @@ const UserOrder = () => {
       return data;
     },
   });
+
   return (
     <>
-      <p className="mb-8 text-2xl">Orders</p>
-      <div className="order-section">
-        {orders?.map((order, i) => (
-          <Link className="single-order" key={i}>
-            <img src={order.img} alt="Food images" />
-            <h3>{order.name}</h3>
-            <h4>Price: ${order.price}</h4>
-            <Link>
-              <button>
-                Payment <FaArrowRight className="arrow-icon" />
-              </button>
-            </Link>
-          </Link>
-        ))}
-      </div>
+      {orders.length === 0 ? (
+        <p>No Order Here</p>
+      ) : (
+        <>
+          <p className="mb-8 text-2xl">Orders</p>
+          <div className="overflow-x-auto text-black">
+            <table className="table w-full">
+              <thead>
+                <tr>
+                  <th>SL.</th>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              {orders?.map((order, i) => (
+                <tbody key={i}>
+                  <tr className="bg-base-200">
+                    <th>{i + 1}</th>
+                    <th>
+                      <img
+                        className="w-16 h-16"
+                        src={order.img}
+                        alt="order images"
+                      />
+                    </th>
+                    <td>{order?.name}</td>
+                    <td>{order?.price}</td>
+                    <td>{order?.quantity}</td>
+                    <td>
+                      <button className="btn">Order</button>
+                    </td>
+                  </tr>
+                </tbody>
+              ))}
+            </table>
+          </div>
+        </>
+      )}
     </>
   );
 };

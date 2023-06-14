@@ -4,6 +4,7 @@ import { useQuery } from "react-query";
 import BannerImg from "../../Others/BannerImg";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import Loader from "../../../components/Loader/Loader";
 
 const AllFood = () => {
   const { data: foods = [] } = useQuery({
@@ -14,6 +15,11 @@ const AllFood = () => {
       return data;
     },
   });
+
+  if (foods.length === 0) {
+    return <Loader></Loader>;
+  }
+
   return (
     <>
       <BannerImg></BannerImg>

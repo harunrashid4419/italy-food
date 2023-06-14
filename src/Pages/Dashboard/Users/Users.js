@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { FaUserAlt } from "react-icons/fa";
+import Loader from "../../../components/Loader/Loader";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -10,11 +11,16 @@ const Users = () => {
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, []);
+
+  if (users.length === 0) {
+    return <Loader></Loader>;
+  }
+
   return (
-    <div>
+    <>
       <p className="mb-8 text-2xl">Users</p>
       <div className="overflow-x-auto text-black">
-        <table className="table">
+        <table className="table w-full">
           <thead>
             <tr>
               <th>SL.</th>
@@ -41,13 +47,19 @@ const Users = () => {
                 </th>
                 <td>{user?.name}</td>
                 <td>{user?.email}</td>
-                <td>{user?.role ? <p>Admin</p> : <p>Make Admin</p>}</td>
+                <td>
+                  {user?.role ? (
+                    <p>Admin</p>
+                  ) : (
+                    <p className="btn">Make Admin</p>
+                  )}
+                </td>
               </tr>
             </tbody>
           ))}
         </table>
       </div>
-    </div>
+    </>
   );
 };
 
