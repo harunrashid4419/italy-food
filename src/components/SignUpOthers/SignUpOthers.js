@@ -4,12 +4,13 @@ import "./SignUpOthers.css";
 import { AuthContext } from "../../UserContext/UserContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import { motion } from "framer-motion";
 
 const SignUpOthers = () => {
   const { googleSignup } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || '/';
+  const from = location.state?.from?.pathname || "/";
 
   const handleGoogleSignUp = () => {
     googleSignup()
@@ -17,7 +18,7 @@ const SignUpOthers = () => {
         const user = result.user;
         console.log(user);
         toast.success("GoogleSingUp Successfully!");
-        navigate(from, {replace: true});
+        navigate(from, { replace: true });
         googleUserAddToDB(user.displayName, user.email, user.photoURL);
       })
       .catch((error) => console.log(error));
@@ -43,14 +44,35 @@ const SignUpOthers = () => {
       <div className="flex flex-col w-full border-opacity-50">
         <div className="divider">OR</div>
       </div>
-      <div onClick={handleGoogleSignUp} id="google-signup">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          transition: {
+            delay: 0.1,
+            duration: 0.5,
+          },
+        }}
+        onClick={handleGoogleSignUp}
+        id="google-signup"
+      >
         <FaGoogle id="google" />
         <p>Login with google</p>
-      </div>
-      <div id="facebook-signup">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          transition: {
+            delay: 0.3,
+            duration: 0.5,
+          },
+        }}
+        id="facebook-signup"
+      >
         <FaFacebookF id="facebook" />
         <p>Login with facebook</p>
-      </div>
+      </motion.div>
     </>
   );
 };

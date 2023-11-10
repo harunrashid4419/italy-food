@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { FaUserAlt } from "react-icons/fa";
 import Loader from "../../../components/Loader/Loader";
+import { motion } from "framer-motion";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -18,8 +19,31 @@ const Users = () => {
 
   return (
     <>
-      <p className="mb-8 text-2xl">Users</p>
-      <div className="overflow-x-auto text-black">
+      <motion.p
+        initial={{ y: -30, opacity: 0 }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            delay: 0.3,
+            duration: 0.5,
+          },
+        }}
+        className="mb-8 text-2xl"
+      >
+        Users
+      </motion.p>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          transition: {
+            delay: 0.3,
+            duration: 0.5,
+          },
+        }}
+        className="overflow-x-auto text-black"
+      >
         <table className="table w-full">
           <thead>
             <tr>
@@ -58,7 +82,7 @@ const Users = () => {
             </tbody>
           ))}
         </table>
-      </div>
+      </motion.div>
     </>
   );
 };

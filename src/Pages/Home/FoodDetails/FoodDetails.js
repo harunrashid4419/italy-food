@@ -11,6 +11,7 @@ import { BsFillStarFill } from "react-icons/bs";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import AddReview from "../AddReview/AddReview";
 import OrderModal from "../../Others/Modal/OrderModal";
+import { motion } from "framer-motion";
 
 const FoodDetails = () => {
   const food = useLoaderData();
@@ -20,7 +21,17 @@ const FoodDetails = () => {
       <DetailBanner></DetailBanner>
       <div className="container">
         <div className="food-details">
-          <div className="images">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: 0.3,
+                duration: 0.5,
+              },
+            }}
+            className="images"
+          >
             <Swiper
               navigation={true}
               modules={[Navigation]}
@@ -33,23 +44,80 @@ const FoodDetails = () => {
                 <img src={img1} alt="" />
               </SwiperSlide>
             </Swiper>
-          </div>
+          </motion.div>
           <div className="content">
-            <h3>{name}</h3>
-            <h4>${price}</h4>
-            <div className="rating">
+            <motion.h3
+              initial={{ y: -50, opacity: 0 }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  delay: 0.3,
+                  duration: 0.5,
+                },
+              }}
+            >
+              {name}
+            </motion.h3>
+            <motion.h4
+              initial={{ y: -50, opacity: 0 }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  delay: 0.3,
+                  duration: 0.5,
+                },
+              }}
+            >
+              ${price}
+            </motion.h4>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: {
+                  delay: 0.3,
+                  duration: 0.5,
+                },
+              }}
+              className="rating"
+            >
               <BsFillStarFill />
               <BsFillStarFill />
               <BsFillStarFill />
               <BsFillStarFill />
               <BsFillStarFill />
               <p>(1 customer review)</p>
-            </div>
+            </motion.div>
             <hr />
-            <p className="description">{description}</p>
-            <h5>
+            <motion.p
+              initial={{ y: -30, opacity: 0 }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  delay: 0.3,
+                  duration: 0.5,
+                },
+              }}
+              className="description"
+            >
+              {description}
+            </motion.p>
+            <motion.h5
+              initial={{ y: -20, opacity: 0 }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  delay: 0.3,
+                  duration: 0.5,
+                },
+              }}
+            >
               <span>Category:</span> {category}
-            </h5>
+            </motion.h5>
             <div className="order">
               <label className="button" htmlFor="order-modal">
                 Order Now
@@ -58,15 +126,42 @@ const FoodDetails = () => {
             <OrderModal name={name} price={price} img={img}></OrderModal>
             <hr />
             <div className="share">
-              <span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    delay: 0.2,
+                    duration: 0.5,
+                  },
+                }}
+              >
                 <FaFacebookF /> Facebook
-              </span>
-              <span>
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                    duration: 0.5,
+                  },
+                }}
+              >
                 <FaTwitter /> Twitter
-              </span>
-              <span>
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    delay: 0.4,
+                    duration: 0.5,
+                  },
+                }}
+              >
                 <FaLinkedinIn /> LinkedIn
-              </span>
+              </motion.span>
             </div>
           </div>
         </div>

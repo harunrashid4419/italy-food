@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { useQuery } from "react-query";
 import { AuthContext } from "../../../UserContext/UserContext";
 import "./UserOrder.css";
+import { motion } from "framer-motion";
 
 const UserOrder = () => {
   const { user } = useContext(AuthContext);
@@ -20,11 +21,46 @@ const UserOrder = () => {
   return (
     <>
       {orders.length === 0 ? (
-        <p>No Order Here</p>
+        <motion.p
+          initial={{ y: -30, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.3,
+              duration: 0.5,
+            },
+          }}
+        >
+          No Order Here
+        </motion.p>
       ) : (
         <>
-          <p className="mb-8 text-2xl">Orders</p>
-          <div className="overflow-x-auto text-black">
+          <motion.p
+            initial={{ y: -30, opacity: 0 }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: {
+                delay: 0.3,
+                duration: 0.5,
+              },
+            }}
+            className="mb-8 text-2xl"
+          >
+            Orders
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: 0.3,
+                duration: 0.5,
+              },
+            }}
+            className="overflow-x-auto text-black"
+          >
             <table className="table w-full">
               <thead>
                 <tr>
@@ -57,7 +93,7 @@ const UserOrder = () => {
                 </tbody>
               ))}
             </table>
-          </div>
+          </motion.div>
         </>
       )}
     </>

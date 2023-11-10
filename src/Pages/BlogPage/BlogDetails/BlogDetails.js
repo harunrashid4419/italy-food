@@ -10,6 +10,7 @@ import {
   FaLinkedinIn,
   FaDiscord,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const BlogDetails = () => {
   const details = useLoaderData();
@@ -31,20 +32,43 @@ const BlogDetails = () => {
     <>
       <div className="blog-details">
         <img className="banner-img" src={bannerImg} alt="Banner Images" />
-        <div className="content">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              delay: 0.3,
+              duration: 0.5,
+            },
+          }}
+          className="content"
+        >
           <h5>
             <FaCalendarAlt />
             {date}
           </h5>
           <h3>{title}</h3>
-          <p> <Link to='/'>Home /</Link> Blog Details</p>
-        </div>
+          <p>
+            <Link to="/">Home /</Link> Blog Details
+          </p>
+        </motion.div>
       </div>
       <div className="details">
         <div className="container">
           <div className="main-details">
             <div className="details-content">
-              <img src={img} alt="Blog Images" />
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                    duration: 0.5,
+                  },
+                }}
+                src={img}
+                alt="Blog Images"
+              />
               <p>{description}</p>
               {secondPera && <p>{secondPera}</p>}
               {thirdPera && <p>{thirdPera}</p>}
@@ -70,20 +94,89 @@ const BlogDetails = () => {
               </div>
             </div>
             <div className="input-feild">
-              <h4>About Us</h4>
-              <img src={aboutImg} alt="about img" />
-              <p>
+              <motion.h4
+                initial={{ y: -30, opacity: 0 }}
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                    duration: 0.5,
+                  },
+                }}
+              >
+                About Us
+              </motion.h4>
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                    duration: 0.5,
+                  },
+                }}
+                src={aboutImg}
+                alt="about img"
+              />
+              <motion.p
+                initial={{ y: -30, opacity: 0 }}
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                    duration: 0.5,
+                  },
+                }}
+              >
                 Whether you are looking for a quick cup of coffee, a savoury
                 snack or sweet tooth craving, Bistro Cafe is your ideal hang
                 out.Come join us at Bistro Cafe and enjoy a hearty breakfast.
                 Besides, we can also offer a vast selection of lunch options
                 ranging from healthy salad options, soups and more!
-              </p>
-              <h4>Subscrible</h4>
+              </motion.p>
+              <motion.h4
+                initial={{ y: -30, opacity: 0 }}
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                    duration: 0.5,
+                  },
+                }}
+              >
+                Subscrible
+              </motion.h4>
               <input type="email" placeholder="Your Email" />
-              <h4>Category</h4>
+              <motion.h4
+                initial={{ y: -30, opacity: 0 }}
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                    duration: 0.5,
+                  },
+                }}
+              >
+                Category
+              </motion.h4>
               <Link>Blog</Link>
-              <h5>Follow Me</h5>
+              <motion.h5
+                initial={{ y: -30, opacity: 0 }}
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                    duration: 0.5,
+                  },
+                }}
+              >
+                Follow Me
+              </motion.h5>
               <div className="blog-icon">
                 <Link>
                   <FaFacebookF />

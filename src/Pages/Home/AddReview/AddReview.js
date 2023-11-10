@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { HiUserCircle } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 const AddReview = ({ _id, name }) => {
   const [rating, setRating] = useState(0);
@@ -60,14 +61,34 @@ const AddReview = ({ _id, name }) => {
   return (
     <>
       <div className="show-review">
-        <h1>
+        <motion.h1
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.3,
+              duration: 0.5,
+            },
+          }}
+        >
           {reviews?.length} review for <span>{name}</span>
-        </h1>
+        </motion.h1>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
           {reviews &&
             reviews?.map((review) => (
               <SwiperSlide>
-                <div className="main-review">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{
+                    opacity: 1,
+                    transition: {
+                      delay: 0.3,
+                      duration: 0.5,
+                    },
+                  }}
+                  className="main-review"
+                >
                   <div className="review-sections">
                     <div className="review-header">
                       <HiUserCircle />
@@ -79,7 +100,7 @@ const AddReview = ({ _id, name }) => {
                     <p>{review.rating}</p>
                   </div>
                   <p>{review.review}</p>
-                </div>
+                </motion.div>
               </SwiperSlide>
             ))}
         </Swiper>
@@ -88,10 +109,31 @@ const AddReview = ({ _id, name }) => {
         <h3>
           <FaEdit /> Add a review
         </h3>
-        <p className="paragraph">
+        <motion.p
+          initial={{ y: -20, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.3,
+              duration: 0.5,
+            },
+          }}
+          className="paragraph"
+        >
           Your email address will not be published. Required fields are marked *
-        </p>
-        <form onSubmit={handleReview}>
+        </motion.p>
+        <motion.form
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              delay: 0.3,
+              duration: 0.5,
+            },
+          }}
+          onSubmit={handleReview}
+        >
           <div className="rating">
             <p>Your Rating: </p>
             <ReactStars
@@ -116,7 +158,7 @@ const AddReview = ({ _id, name }) => {
               ></textarea>
             </div>
           </div>
-        </form>
+        </motion.form>
       </div>
     </>
   );

@@ -2,12 +2,23 @@ import React from "react";
 import "./SingleBlog.css";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const SingleBlog = ({ blog }) => {
   const { _id, img, title, creator, comment, description, dateNum, dateMonth } =
     blog;
   return (
-    <div className="singleBlog">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+        transition: {
+          delay: 0.3,
+          duration: 0.5,
+        },
+      }}
+      className="singleBlog"
+    >
       <img src={img} alt="blog-img" />
       <div className="blog-content">
         <span className="dateNumber">{dateNum}</span>
@@ -29,7 +40,7 @@ const SingleBlog = ({ blog }) => {
           </button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

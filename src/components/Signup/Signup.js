@@ -9,6 +9,7 @@ import "./Signup.css";
 import SignupBanner from "./SignupBanner";
 import { useState } from "react";
 import SignUpOthers from "../SignUpOthers/SignUpOthers";
+import { motion } from "framer-motion";
 
 const Signup = () => {
   const {
@@ -43,21 +44,21 @@ const Signup = () => {
       });
   };
 
-  const userAddToDB = (name, email) =>{
-    const userInfo = {name, email};
+  const userAddToDB = (name, email) => {
+    const userInfo = { name, email };
     console.log(userInfo);
-    fetch('https://italy-food-server.vercel.app/users', {
+    fetch("https://italy-food-server.vercel.app/users", {
       method: "POST",
       headers: {
-        'content-type': 'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(userInfo)
+      body: JSON.stringify(userInfo),
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
-      })
-  }
+      });
+  };
 
   return (
     <>
@@ -65,9 +66,31 @@ const Signup = () => {
       <div className="container">
         <div className="main-singup">
           <div className="signup">
-            <h3>SingUp</h3>
+            <motion.h3
+              initial={{ y: -30, opacity: 0 }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  delay: 0.3,
+                  duration: 0.5,
+                },
+              }}
+            >
+              SingUp
+            </motion.h3>
             <form onSubmit={handleSubmit(handleSignUp)}>
-              <div className="form-control mb-5 form-icon">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                    duration: 0.5,
+                  },
+                }}
+                className="form-control mb-5 form-icon"
+              >
                 <FaUser className="icon" />
                 <input
                   type="text"
@@ -78,8 +101,18 @@ const Signup = () => {
                 {errors?.name && (
                   <p className="text-red-500 mt-3">{errors?.name?.message}</p>
                 )}
-              </div>
-              <div className="form-control mb-5 form-icon">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    delay: 0.1,
+                    duration: 0.5,
+                  },
+                }}
+                className="form-control mb-5 form-icon"
+              >
                 <AiOutlineMail className="icon" />
                 <input
                   type="email"
@@ -90,11 +123,21 @@ const Signup = () => {
                 {errors?.email && (
                   <p className="text-red-500 mt-3">{errors?.email?.message}</p>
                 )}
-              </div>
-              <div className="form-control mb-5 form-icon">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    delay: 0.2,
+                    duration: 0.5,
+                  },
+                }}
+                className="form-control mb-5 form-icon"
+              >
                 <FaLock className="icon" />
                 <input
-                  type={eye ? 'text': 'password'}
+                  type={eye ? "text" : "password"}
                   {...register(
                     "password",
                     {
@@ -114,7 +157,7 @@ const Signup = () => {
                   placeholder="Password"
                   className="input"
                 />
-                <div id='eye-icon' onClick={() => setEye(!eye)}>
+                <div id="eye-icon" onClick={() => setEye(!eye)}>
                   {eye ? <FaEye /> : <FaEyeSlash />}
                 </div>
                 {errors?.password && (
@@ -122,21 +165,32 @@ const Signup = () => {
                     {errors?.password?.message}
                   </p>
                 )}
-              </div>
+              </motion.div>
               <p className="text-red-500">{error}</p>
               <div id="button" className="mt-3">
                 <input className="w-full" value="SignUp" type="submit" />
               </div>
             </form>
             <SignUpOthers></SignUpOthers>
-            <div className="singup-link">
+            <motion.div
+              initial={{ y: -20, opacity: 0 }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  delay: 0.3,
+                  duration: 0.5,
+                },
+              }}
+              className="singup-link"
+            >
               <p>
                 Already have an account{" "}
                 <Link to="/login" className="link">
                   LogIn
                 </Link>{" "}
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./FoodAdd.css";
 import { toast } from "react-hot-toast";
+import { motion } from "framer-motion";
 
 const FoodAdd = () => {
   const imgKey = "2ed74405c9982edbe45a4ac8ae219bfb";
@@ -53,12 +54,60 @@ const FoodAdd = () => {
 
   return (
     <>
-      <p className="mb-8 text-2xl">Add Food</p>
+      <motion.p
+        initial={{ y: -30, opacity: 0 }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            delay: 0.3,
+            duration: 0.5,
+          },
+        }}
+        className="mb-8 text-2xl"
+      >
+        Add Food
+      </motion.p>
       <div className="add-food">
         <form onSubmit={handleAddFood}>
-          <input type="text" name="name" placeholder="Food Name" />
-          <input type="text" name="price" placeholder="Price" />
-          <select name="category" placeholder="Select Categories">
+          <motion.input
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: 0.1,
+                duration: 0.5,
+              },
+            }}
+            type="text"
+            name="name"
+            placeholder="Food Name"
+          />
+          <motion.input
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: 0.2,
+                duration: 0.5,
+              },
+            }}
+            type="text"
+            name="price"
+            placeholder="Price"
+          />
+          <motion.select
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: 0.3,
+                duration: 0.5,
+              },
+            }}
+            name="category"
+            placeholder="Select Categories"
+          >
             <option disabled selected>
               Select Categories
             </option>
@@ -69,9 +118,32 @@ const FoodAdd = () => {
             <option>SODA WATER</option>
             <option>BURGERS, BUTTER MIX</option>
             <option>FASCINATING TASTE, SODA WATER</option>
-          </select>
-          <textarea name="description" placeholder="Description"></textarea>
-          <input type="file" name="img" accept="image/*" />
+          </motion.select>
+          <motion.textarea
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: 0.3,
+                duration: 0.5,
+              },
+            }}
+            name="description"
+            placeholder="Description"
+          ></motion.textarea>
+          <motion.input
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: 0.3,
+                duration: 0.5,
+              },
+            }}
+            type="file"
+            name="img"
+            accept="image/*"
+          />
           <input className="submit-button" type="submit" value="Submit" />
         </form>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { toast } from "react-hot-toast";
+import { motion } from "framer-motion";
 
 const UserReview = () => {
   const imgKey = "2ed74405c9982edbe45a4ac8ae219bfb";
@@ -41,16 +42,63 @@ const UserReview = () => {
   };
   return (
     <>
-      <p className="mb-8 text-2xl">Add User Review</p>
+      <motion.p
+        initial={{ y: -30, opacity: 0 }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            delay: 0.3,
+            duration: 0.5,
+          },
+        }}
+        className="mb-8 text-2xl"
+      >
+        Add User Review
+      </motion.p>
       <div className="add-food">
         <form onSubmit={handleAddReview}>
-          <input type="text" name="name" placeholder="Your Name" required />
-          <textarea
+          <motion.input
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: 0.1,
+                duration: 0.5,
+              },
+            }}
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+          />
+          <motion.textarea
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: 0.2,
+                duration: 0.5,
+              },
+            }}
             name="message"
             placeholder="Your Review"
             required
-          ></textarea>
-          <input type="file" name="img" accept="image/*" required />
+          ></motion.textarea>
+          <motion.input
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: 0.3,
+                duration: 0.5,
+              },
+            }}
+            type="file"
+            name="img"
+            accept="image/*"
+            required
+          />
           <input className="submit-button" type="submit" value="Submit" />
         </form>
       </div>
