@@ -3,6 +3,7 @@ import "./foods.css";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Loader from "../../../components/Loader/Loader";
+import { motion } from "framer-motion";
 
 const Foods = () => {
   const [allFood, setAllFood] = useState([]);
@@ -20,9 +21,44 @@ const Foods = () => {
   return (
     <div className="container">
       <div className="main-foods">
-        <h2>Welcome</h2>
-        <p className="top-paragraph">Italy Food Resturent</p>
-        <div className="foods-section">
+        <motion.h2
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.3,
+              duration: 0.5,
+            },
+          }}
+        >
+          Welcome
+        </motion.h2>
+        <motion.p
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.3,
+              duration: 0.5,
+            },
+          }}
+          className="top-paragraph"
+        >
+          Italy Food Resturent
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              delay: 0.4,
+              duration: 0.5,
+            },
+          }}
+          className="foods-section"
+        >
           {allFood?.map((food, i) => (
             <Link
               to={`../foodDetails/${food._id}`}
@@ -39,7 +75,7 @@ const Foods = () => {
               </Link>
             </Link>
           ))}
-        </div>
+        </motion.div>
         <Link to="foods">
           <button>All Foods</button>
         </Link>

@@ -8,6 +8,7 @@ import {
   FaLinkedinIn,
   FaTwitter,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Chef = () => {
   const chefs = [
@@ -65,12 +66,34 @@ const Chef = () => {
   return (
     <div className="container">
       <div className="chef-section">
-        <h1>Meet Our Cheef</h1>
-        <p>
+        <motion.h1
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.3,
+              duration: 0.5,
+            },
+          }}
+        >
+          Meet Our Cheef
+        </motion.h1>
+        <motion.p
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.3,
+              duration: 0.5,
+            },
+          }}
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s.{" "}
-        </p>
+          since the 1500s.
+        </motion.p>
         <Swiper
           spaceBetween={30}
           autoplay={{
@@ -116,7 +139,18 @@ const Chef = () => {
           {chefs &&
             chefs?.map((chef) => (
               <SwiperSlide key={chef._id} className="slider">
-                <div id='chef' className="chef-border">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{
+                    opacity: 1,
+                    transition: {
+                      delay: 0.4,
+                      duration: 0.5,
+                    },
+                  }}
+                  id="chef"
+                  className="chef-border"
+                >
                   <div className="chef">
                     <img src={chef?.img} alt="chef-img" />
                     <div className="social-media">
@@ -136,7 +170,7 @@ const Chef = () => {
                     <h1>{chef?.name}</h1>
                     <h2>{chef?.role}</h2>
                   </div>
-                </div>
+                </motion.div>
               </SwiperSlide>
             ))}
         </Swiper>

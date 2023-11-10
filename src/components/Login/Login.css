@@ -1,125 +1,125 @@
-.login-section{
-    display: flex;
-    background-color: #fff;
-    padding: 50px 0;
+.login-section {
+  display: flex;
+  background-color: #fff;
+  padding: 50px 0;
 }
-.login-section .animation{
-    width: 40%;
-    display: flex;
-    align-items: center;
+.login-section .animation {
+  width: 40%;
+  display: flex;
+  align-items: center;
 }
-.login-section .animation .anime{
-    width: 400px;
-    margin: 0 auto;
+.login-section .animation .anime {
+  width: 400px;
+  margin: 0 auto;
 }
-.login-section .login{
-    width: 50%;
-    margin: 50px auto;
-    margin-left: 10%;
-    padding: 0 50px;
+.login-section .login {
+  width: 50%;
+  margin: 50px auto;
+  margin-left: 10%;
+  padding: 0 50px;
 }
-.login-section .login h3{
-    color: #3f3f3f;
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 30px;
-    letter-spacing: 5px;
+.login-section .login h3 {
+  color: #3f3f3f;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 5px;
 }
-.login-section .login input{
-    border: 1px solid #0000003d;
-    border-radius: 5px;
+.login-section .login input {
+  border: 1px solid #0000003d;
+  border-radius: 5px;
 }
-.login-section .login input::placeholder{
-    padding-left: 10px;
+.login-section .login input::placeholder {
+  padding-left: 10px;
 }
-.login-section .login span{
-    color: #333333;
-    pointer-events: none;
-    font-size: 16px;
-    font-weight: 400;
-    position: absolute;
-    left: 5%;
-    top: 50%;
-    transform: translate(-5%, -50%);
-    transition: .3s ease-out;
+.login-section .login span {
+  color: #333333;
+  pointer-events: none;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translate(-5%, -50%);
+  transition: 0.3s ease-out;
 }
 .login-section .login input:valid ~ span,
-.login-section .login input:focus ~ span{
-    transform: translateY(-39px);
-    padding: 0 7px;
-    background-color: white;
-    color: #6A1818;
+.login-section .login input:focus ~ span {
+  transform: translateY(-39px);
+  padding: 0 7px;
+  background-color: white;
+  color: #6a1818;
 }
-.login-section .login input:focus{
-    border: none;
+.login-section .login input:focus {
+  border: none;
 }
-.form-icon{
-    position: relative;
+.form-icon {
+  position: relative;
 }
-.login-section .forget-pass{
-    text-align: right;
+.login-section .forget-pass {
+  text-align: right;
 }
-#button input{
-    background: linear-gradient(to left, green 50%, black 50%) right;
-    background-size: 200%;
-    transition: .5s ease-out;
+#button input {
+  background: linear-gradient(to left, green 50%, black 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
 }
-#button input:hover{
-    background-position: left;
+#button input:hover {
+  background-position: left;
 }
-.login-section .social-login{
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
+.login-section .social-login {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
 }
-.login-section .social-login .social-icon{
-    height: 50px;
-    width: 50px;
-    background-image: linear-gradient(to right, #008000b8 , gray);
-    padding: 13px;
-    border-radius: 50%;
-    color: white;
-    margin: 0 10px;
+.login-section .social-login .social-icon {
+  height: 50px;
+  width: 50px;
+  background-image: linear-gradient(to right, #008000b8, gray);
+  padding: 13px;
+  border-radius: 50%;
+  color: white;
+  margin: 0 10px;
 }
-.login-section .social-login .social-icon:hover{
-    opacity: 70%;
+.login-section .social-login .social-icon:hover {
+  opacity: 70%;
 }
-.login-section .singup-link{
-    margin-top: 15px;
-    text-align: center;
+.login-section .singup-link {
+  margin-top: 15px;
+  text-align: center;
 }
-.login-section .singup-link .link{
-    color: green;
-    font-size: 20px;
-    text-decoration: none;
+.login-section .singup-link .link {
+  color: green;
+  font-size: 20px;
+  text-decoration: none;
 }
-.login-section .singup-link .link:hover{
-    opacity: 70%;
+.login-section .singup-link .link:hover {
+  opacity: 70%;
 }
 @media screen and (max-width: 767px) {
-    .login-section {
-        display: block;
-    }
-    .login-section .animation {
-        width: 100%;
-        display: none;
-    }
-    .login-section .login {
-        width: 100%;
-        margin: 0;
-        padding: 50px 100px;
-    }
+  .login-section {
+    display: block;
+  }
+  .login-section .animation {
+    width: 100%;
+    display: none;
+  }
+  .login-section .login {
+    width: 100%;
+    margin: 0;
+    padding: 50px 100px;
+  }
 }
 
 @media screen and (max-width: 576px) {
-    .login-section .login {
-        padding: 20px 20px;
-    }
-    .login-section .animation .anime{
-        width: 200px;
-    }
-    .login-section {
-        padding: 20px 0;
-    }
+  .login-section .login {
+    padding: 20px 20px;
+  }
+  .login-section .animation .anime {
+    width: 200px;
+  }
+  .login-section {
+    padding: 20px 0;
+  }
 }

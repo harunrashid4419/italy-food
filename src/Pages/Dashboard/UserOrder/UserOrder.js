@@ -3,7 +3,6 @@ import { useContext } from "react";
 import { useQuery } from "react-query";
 import { AuthContext } from "../../../UserContext/UserContext";
 import "./UserOrder.css";
-import Loader from "../../../components/Loader/Loader";
 
 const UserOrder = () => {
   const { user } = useContext(AuthContext);
@@ -52,7 +51,7 @@ const UserOrder = () => {
                     <td>{order?.price}</td>
                     <td>{order?.quantity}</td>
                     <td>
-                      <button className="btn">Order</button>
+                      <button className="btn">Pay</button>
                     </td>
                   </tr>
                 </tbody>

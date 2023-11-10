@@ -3,27 +3,70 @@ import "./Contact.css";
 import { FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <div className="container">
-      <div id='contact' className="contact-section">
-        <h1>Contact Us & Our Location</h1>
-        <p>
+      <div id="contact" className="contact-section">
+        <motion.h1
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.3,
+              duration: 0.5,
+            },
+          }}
+        >
+          Contact Us & Our Location
+        </motion.h1>
+        <motion.p
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.3,
+              duration: 0.5,
+            },
+          }}
+        >
           If you need to contact us, you can contact us in the contact section
           below. And if you want to visit our restaurant, then visit the below
           location.
-        </p>
+        </motion.p>
         <div className="main-contact">
-          <div className="contact">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: 0.4,
+                duration: 0.5,
+              },
+            }}
+            className="contact"
+          >
             <h2>Contact Us</h2>
             <input type="text" placeholder="Your Name*" />
             <input type="email" placeholder="Your Email*" />
             <input type="number" placeholder="Your Phone*" />
             <textarea placeholder="Comments*"></textarea>
             <button>Send Message</button>
-          </div>
-          <div className="location">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                delay: 0.6,
+                duration: 0.5,
+              },
+            }}
+            className="location"
+          >
             <h2>Location</h2>
             <div className="img"></div>
             <div className="icon-text">
@@ -36,9 +79,9 @@ const Contact = () => {
             </div>
             <div className="icon-text">
               <AiOutlineMail className="icon" />
-              <a href="mailto:zero@theme.com">zero@theme.com</a>
+              <a href="mailto:italy@food.com">italy@food.com</a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
