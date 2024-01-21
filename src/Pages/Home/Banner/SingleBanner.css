@@ -43,6 +43,9 @@
     font-size: 14px;
     line-height: 22px;
   }
+  .slider-content {
+    padding: 20px 10px;
+  }
 }
 
 @media screen and (max-width: 414px) {

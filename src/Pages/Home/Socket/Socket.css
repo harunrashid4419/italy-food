@@ -1,51 +1,56 @@
-.socket-section{
-    padding-bottom: 30px;
+.socket-section {
+  padding-bottom: 30px;
 }
-.socket-section .socket{
-    background-color: #F2F1E8;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-    border: 1px solid #00000017;
-    position: relative;
+.socket-section .socket {
+  background-color: #f2f1e8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  border: 1px solid #00000017;
+  position: relative;
 }
-.socket-section .socket::after{
-    content: '';
-    background-image: url(/src/assets/bg-2.png);
-    height: 7px;
-    width: 100%;
-    left: 0;
-    bottom: -7px;
-    position: absolute;
+.socket-section .socket::after {
+  content: "";
+  background-image: url(/src/assets/bg-2.png);
+  height: 7px;
+  width: 100%;
+  left: 0;
+  bottom: -7px;
+  position: absolute;
 }
 .socket-section .left p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #3f3f3f;
-    padding: 19px 0px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3f3f3f;
+  padding: 19px 0px;
 }
 .socket-section .left a {
-    font-size: 16px;
-    font-weight: 400;
-    color: #92907c;
-    transition: .6s;
+  font-size: 16px;
+  font-weight: 400;
+  color: #92907c;
+  transition: 0.6s;
 }
-.socket-section .right a:first-child{
-	margin-right: 10px;
+.socket-section .right a:first-child {
+  margin-right: 10px;
 }
-.socket-section .right a{
-	transition: .5s;
+.socket-section .right a {
+  transition: 0.5s;
 }
-.socket-section .right a:hover{
-	color: red ;
+.socket-section .right a:hover {
+  color: red;
 }
 @media screen and (max-width: 992px) {
-    .socket-section .socket{
-        display: block;
-    }
-    .socket-section .socket .right{
-        text-align: right;
-        margin-bottom: 10px;
-    }
+  .socket-section .socket {
+    display: block;
+  }
+  .socket-section .socket .right {
+    text-align: right;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .socket-section .socket {
+    padding: 0 10px;
+  }
 }

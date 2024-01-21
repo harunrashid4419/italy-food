@@ -1,76 +1,79 @@
-.capacity-section{
-    background-color:whitesmoke;
-    padding: 80px 20px;
-    text-align: center;
+.capacity-section {
+  background-color: whitesmoke;
+  padding: 80px 20px;
+  text-align: center;
 }
-.capacity-section .capacity{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    padding-top: 40px;
+.capacity-section .capacity {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding-top: 40px;
 }
-.capacity-section .capacity .img{
-    margin: auto;
-    transition: 1s ease-out;
+.capacity-section .capacity .img {
+  margin: auto;
+  transition: 1s ease-out;
 }
-.capacity-section .single-capacity{
-    position: relative;
+.capacity-section .single-capacity {
+  position: relative;
 }
-.capacity-section .capacity .icon{
-    width: 50px;
-    pointer-events: none;
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -20%);
+.capacity-section .capacity .icon {
+  width: 50px;
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -20%);
 }
-.capacity-section .capacity .img:hover{
-    transform: rotate(360deg);
+.capacity-section .capacity .img:hover {
+  transform: rotate(360deg);
 }
-.capacity-section h2{
-    font-size: 30px;
-    font-weight: 700;
-    color: #333333;
+.capacity-section h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333333;
 }
-.capacity-section p{
-    font-size: 14px;
-    color: #555555;
-    max-width: 535px;
-    margin: 10px auto;
-    line-height: 20px;
-    font-weight: 400;
+.capacity-section p {
+  font-size: 14px;
+  color: #555555;
+  max-width: 535px;
+  margin: 10px auto;
+  line-height: 20px;
+  font-weight: 400;
 }
-.capacity-section .capacity h3{
-    font-size: 18px;
-    color: #333333;
-    margin-top: 20px;
+.capacity-section .capacity h3 {
+  font-size: 18px;
+  color: #333333;
+  margin-top: 20px;
 }
-.capacity-section .capacity p{
-    font-size: 14px;
-    color: #555555;
-    font-weight: 400;
+.capacity-section .capacity p {
+  font-size: 14px;
+  color: #555555;
+  font-weight: 400;
 }
 @media screen and (max-width: 1024px) {
-    .capacity-section .capacity{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-        padding: 40px 70px 0 70px;
-    }
+  .capacity-section .capacity {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 40px 70px 0 70px;
+  }
 }
 @media screen and (max-width: 767px) {
-    .capacity-section .capacity{
-        grid-template-columns: repeat(1, 1fr);
-        gap: 30px;
-    }
-    .capacity-section p{
-        max-width: 100%;
-    }
-    .capacity-section{
-        padding: 30px 20px;
-    }
+  .capacity-section .capacity {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  .capacity-section p {
+    max-width: 100%;
+  }
+  .capacity-section {
+    padding: 30px 20px;
+  }
 }
 @media screen and (max-width: 576px) {
-    .capacity-section .capacity{
-        padding: 40px 20px 0 20px;
-    }
+  .capacity-section .capacity {
+    padding: 10px 0;
+  }
+  .capacity-section {
+    padding: 30px 10px;
+  }
 }

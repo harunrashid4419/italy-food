@@ -29,3 +29,8 @@ code {
     padding: 0 30px;
   }
 }
+@media screen and (max-width:576px) {
+  .container{
+    padding: 0 15px;
+  }
+}
