@@ -16,6 +16,7 @@ import { motion } from "framer-motion";
 const FoodDetails = () => {
   const food = useLoaderData();
   const { name, img, img1, category, description, price, _id } = food;
+  console.log(food)
   return (
     <>
       <DetailBanner></DetailBanner>

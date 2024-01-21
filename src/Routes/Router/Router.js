@@ -58,7 +58,6 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blog></Blog>,
-        loader: () => fetch("https://italy-food-server.vercel.app/allBlog"),
       },
     ],
   },
@@ -86,8 +85,7 @@ const router = createBrowserRouter([
         path: "/dashboard/addFood",
         element: (
           <AdminRoute>
-            {" "}
-            <FoodAdd></FoodAdd>{" "}
+            <FoodAdd></FoodAdd>
           </AdminRoute>
         ),
       },

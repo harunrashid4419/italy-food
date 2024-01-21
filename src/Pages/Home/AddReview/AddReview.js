@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { HiUserCircle } from "react-icons/hi";
 import { motion } from "framer-motion";
+import Rating from "./Rating";
 
 const AddReview = ({ _id, name }) => {
   const [rating, setRating] = useState(0);
@@ -97,7 +98,8 @@ const AddReview = ({ _id, name }) => {
                         <h4>{review.date}</h4>
                       </div>
                     </div>
-                    <p>{review.rating}</p>
+                    {/* <p>{review.rating}</p> */}
+                    <Rating rating={review.rating} />
                   </div>
                   <p>{review.review}</p>
                 </motion.div>

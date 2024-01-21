@@ -1,144 +1,147 @@
-.footer-section{
-	background: #F2F1E8;
-	padding: 50px 50px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	position:relative;
+.footer-section {
+  background: #f2f1e8;
+  padding: 50px 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
 }
 .footer-section::before {
-	content: '';
-	background-image: url(/src/assets/bg-3.png);
-	height: 7px;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: absolute;
+  content: "";
+  background-image: url(/src/assets/bg-3.png);
+  height: 7px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 .footer-section .about-section h1,
 .footer-section .open-routine h1,
-.footer-section .links h1{
-	font-size: 24px;
-    font-weight: 700;
-    color: #333333;
-	margin-bottom: 25px;
-	padding-bottom: 7px;
-	text-transform: uppercase;
-    position: relative;
+.footer-section .links h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 25px;
+  padding-bottom: 7px;
+  text-transform: uppercase;
+  position: relative;
 }
 .footer-section .about-section h1::after,
 .footer-section .open-routine h1::after,
-.footer-section .links h1::after{
-	content: '';
-	position: absolute;
-	bottom: 0px;
-    left: 0;
-    border-top: none;
-    height: 3px;
-    width: 100px;
-	background-image: linear-gradient(to right, red, transparent);
+.footer-section .links h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  border-top: none;
+  height: 3px;
+  width: 100px;
+  background-image: linear-gradient(to right, red, transparent);
 }
-.footer-section .about-section p{
-	font-size: 16px;
-    font-weight: 400;
-    color: #555555;
-	line-height: 30px;
+.footer-section .about-section p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 30px;
 }
-.footer-section .about-section .social-links{
-	display: flex;
-	padding-top: 20px;
+.footer-section .about-section .social-links {
+  display: flex;
+  padding-top: 20px;
 }
 .footer-section .about-section .social-links svg {
-    color: #555555;
-    padding: 0 15px;
-    background: transparent;
-    border: 1px solid gray;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-	transition: .8s;
+  color: #555555;
+  padding: 0 15px;
+  background: transparent;
+  border: 1px solid gray;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: 0.8s;
 }
-.footer-section .about-section .social-links a{
-	margin-left: 15px;
+.footer-section .about-section .social-links a {
+  margin-left: 15px;
 }
-.footer-section .about-section .social-links svg:hover{
-	background-color: #EB0029;
-	border: 1px solid #EB0029;
-	color: white;
+.footer-section .about-section .social-links svg:hover {
+  background-color: #eb0029;
+  border: 1px solid #eb0029;
+  color: white;
 }
-.footer-section .about-section .social-links a:first-child{
-	margin-left: 0;
+.footer-section .about-section .social-links a:first-child {
+  margin-left: 0;
 }
-.footer-section .links{
-	padding-left: 50px;
+.footer-section .links {
+  padding-left: 50px;
 }
-.footer-section .links a{
-	display: block;
-	font-size: 16px;
-    font-weight: 400;
-    color: #555555;
-	position: relative;
-	width: fit-content;
-	padding: 0 0 10px 25px;
-	transition: .5s;
+.footer-section .links a {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555555;
+  position: relative;
+  width: fit-content;
+  padding: 0 0 10px 25px;
+  transition: 0.5s;
 }
-.footer-section .links a:hover{
-	color: red;
+.footer-section .links a:hover {
+  color: red;
 }
-.footer-section .links a::before{
-	content: '\f061';
-	position: absolute;
-	font-family: fontawesome;
-	left: 0;
-	top: 0;
-	font-weight: 600;
-	color: black;
-	transition: .5s;
+.footer-section .links a::before {
+  content: "\f061";
+  position: absolute;
+  font-family: fontawesome;
+  left: 0;
+  top: 0;
+  font-weight: 600;
+  color: black;
+  transition: 0.5s;
 }
-.footer-section .links a:hover:before{
-	margin-left: 5px;
-	color: red;
+.footer-section .links a:hover:before {
+  margin-left: 5px;
+  color: red;
 }
-.footer-section .open-routine p{
-	font-size: 16px;
-	font-weight: 400;
-	color: #92907c;
-	margin-bottom: 10px;
+.footer-section .open-routine p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #92907c;
+  margin-bottom: 10px;
 }
-.footer-section .open-routine span{
-	font-size: 18px;
-	font-weight: 700;
-	color: #92907c;
+.footer-section .open-routine span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #92907c;
 }
-.footer-section .open-routine h2{
-	font-size: 18px;
-	font-weight: 700;
-	color: #92907c;
-	margin:21px 0 0 0;
+.footer-section .open-routine h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #92907c;
+  margin: 21px 0 0 0;
 }
-.footer-section .open-routine h3{
-	font-size: 16px;
-	font-weight: 400;
-	color: #92907c;
-	margin:5px 0 0 0;
+.footer-section .open-routine h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #92907c;
+  margin: 5px 0 0 0;
 }
 
 @media screen and (max-width: 992px) {
-    .footer-section{
-		padding: 50px 10px;
-	}
+  .footer-section {
+    padding: 50px 10px;
+  }
 }
 @media screen and (max-width: 767px) {
-	.footer-section{
-		padding: 50px 50px;
-		grid-template-columns: repeat(1, 1fr);
-	}
-	.footer-section .links {
-		padding-left: 0px;
-		padding: 30px 0;
-	}
+  .footer-section {
+    padding: 50px 50px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footer-section .links {
+    padding-left: 0px;
+    padding: 30px 0;
+  }
 }
 @media screen and (max-width: 576px) {
-	.footer-section{
-		padding: 30px 30px;
-	}
+  .footer-section {
+    padding: 30px 30px;
+  }
+  .footer-section .about-section .social-links a {
+    margin-left: 5px;
+  }
 }
